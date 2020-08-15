@@ -1,0 +1,29 @@
+body {
+    background-attachment: fixed;
+    background-image: repeating-linear-gradient(
+      5deg,
+      rgba(254, 124, 0, 0.65) -77%,
+      rgba(254, 124, 0, 0.65) 100%
+    ),
+    url(../../media/base_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home_text {
+    color: white;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home_text__under {
+    background-color: white;
+    width: 300px;
+}
+
+.nav-link.active {
+    color: black;
+}
