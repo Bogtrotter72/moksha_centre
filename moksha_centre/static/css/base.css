@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+#contact_container {
+    color: white;
+}
+
 #home {
     height: 100vh;
     background-color: rgba(233, 236, 239, 0);
@@ -30,6 +34,10 @@ body {
     position: relative;
 }
 
+#offers_container {
+    background-color: rgba(255,255,255,.5);
+}
+
 #story_container {
     background-color: rgba(255,255,255,.7);
     overflow-x: hidden;
@@ -43,6 +51,14 @@ body {
 
 .display-1 {
     font-size: 5rem;
+}
+
+.home_contact_form {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.home_contact_form::placeholder {
+    color: white;
 }
 
 .nav-link.active {
@@ -60,4 +76,4 @@ body {
 
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-}  
+}

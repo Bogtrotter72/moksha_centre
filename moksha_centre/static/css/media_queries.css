@@ -2,4 +2,8 @@
     .display-1 {
         font-size: 6rem;
     }
+
+    .social_icons {
+        padding: 50px 0;
+      }
 }
