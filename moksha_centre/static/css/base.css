@@ -25,14 +25,19 @@ body {
     width: 300px;
 }
 
-#story {
-    position: absolute;
-    top: -66px;
+#membership {
+    background-color: rgba(255, 255, 255, 0.88);
+    position: relative;
 }
 
 #story_container {
     background-color: rgba(255,255,255,.7);
+    overflow-x: hidden;
     position: relative;
+}
+
+.display-1 {
+    font-size: 5rem;
 }
 
 .nav-link.active {

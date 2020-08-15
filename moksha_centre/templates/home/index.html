@@ -1,32 +1,103 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block extra_css %}
-    <!-- Animate on scroll -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+<!-- Animate on scroll -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+<link rel="stylesheet" href="{% static 'css/profile_card.css' %}">
+<link rel="stylesheet" href="{% static 'css/media_queries.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-    <div id="story_container" class="mt-5">
-        <div id="story"></div>
-        <div class="container pt-5">
-            <div class="row py-5">
-                <div class="col-md-12 col-lg-6" data-aos="fade-right" data-aos-duration="1500" data-aos-once="false"><button class="btn" type="button"><img class="img-fluid" src="{{ MEDIA_URL }}about_us.jpg" style="border-style: none;"></button></div>
-                <div class="col" data-aos="fade-left" data-aos-duration="1500" data-aos-once="false" data-aos-offset="500">
-                    <h1 class="text-uppercase text-center">A LITTLE BIT ABOUT US</h1>
-                    <p class="my-5">Welcome to The Moksha Centre, Kerry.<br><br>We offer a wide variety of yoga, pilates and mindfulness classes, with the aim of enabling you to bring healing, balance and harmony into your life.<br><br>If you have a little experience
-                        practising yoga, have an established or advanced practice or if you are considering starting yoga please join us for the highest quality yoga classes taught by expert teachers.<br><br>We have a beautiful studio, located in a secluded,
-                        natural environment that embodies that ideas of health and well-being.<br></p>
-                    <p class="mt-5">We share over a decade of experience in the field of yoga, pilates and mindfulness education and we have welcomed hundreds of students attend our classes from around the world.<br><br>All the staff at our centre are warm, friendly
-                        and supportive; all our teachers are trained to the highest standards and are certified with the Irish Yoga Association.<br></p>
-                </div>
+<div class="jumbtron" id="home">
+    <div id="home_text">
+        <h1 class="display-1 text-uppercase text-center" id="home_text__heading">
+            The<br>Moksha<br>Centre
+        </h1>
+        <hr id="home_text__under">
+        <p class="text-center">A liberating experience</p>
+    </div>
+</div>
+<div id="story_container" class="mt-5">
+    <div class="container pt-5">
+        <div class="row py-5">
+            <div class="col-md-12 col-lg-6" data-aos="fade-right" data-aos-duration="1500">
+                <button class="btn" type="button"><img class="img-fluid" src="{{ MEDIA_URL }}about_us.jpg" style="border-style: none;"></button>
+            </div>
+            <div class="col" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+                <h1 class="text-uppercase text-center">A LITTLE BIT ABOUT US</h1>
+                <p class="my-5">Welcome to The Moksha Centre, Kerry.<br><br>We offer a wide variety of yoga, pilates and
+                    mindfulness classes, with the aim of enabling you to bring healing, balance and harmony into your
+                    life.<br><br>If you have a little experience
+                    practising yoga, have an established or advanced practice or if you are considering starting yoga
+                    please join us for the highest quality yoga classes taught by expert teachers.<br><br>We have a
+                    beautiful studio, located in a secluded,
+                    natural environment that embodies that ideas of health and well-being.<br></p>
+                <p class="mt-5">We share over a decade of experience in the field of yoga, pilates and mindfulness
+                    education and we have welcomed hundreds of students attend our classes from around the
+                    world.<br><br>All the staff at our centre are warm, friendly
+                    and supportive; all our teachers are trained to the highest standards and are certified with the
+                    Irish Yoga Association.<br>
+                </p>
             </div>
         </div>
     </div>
+</div>
+<div class="membership_container">
+    <div id="membership">
+        <div class="container py-5">
+            <div class="intro">
+                <h1 class="text-uppercase text-center mt-3 mb-5">Membership Options</h1>
+                <p class="text-center">Choose from our range of membership options.</p>
+            </div>
+            <div class="row membership_cards">
+                <div class="col-sm-6 col-lg-4 membership_card">
+                    <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="profile-back"></div>
+                        <img src="{{ MEDIA_URL }}yoga_membership.jpg" alt="" class="rounded-circle profile-pic">
+                        <h3 class="profile-name">Yoga Membership</h3>
+                        <p class="profile-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate,
+                            itaque fuga reiciendis ex voluptas voluptatum minima necessitatibus, placeat ducimus
+                            corrupti maxime quisquam nostrum eum voluptates iure consequatur illo. Ut maiores non
+                            aspernatur numquam totam a quae libero, quibusdam est, nam beatae eius sequi rem quas iusto
+                            fugit optio doloremque!</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 membership_card">
+                    <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="profile-back"></div>
+                        <img src="{{ MEDIA_URL }}pilates_membership.jpg" alt="" class="rounded-circle profile-pic">
+                        <h3 class="profile-name">Pilates Membership</h3>
+                        <p class="profile-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate,
+                            itaque fuga reiciendis ex voluptas voluptatum minima necessitatibus, placeat ducimus
+                            corrupti maxime quisquam nostrum eum voluptates iure consequatur illo. Ut maiores non
+                            aspernatur numquam totam a quae libero, quibusdam est, nam beatae eius sequi rem quas iusto
+                            fugit optio doloremque!</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 membership_card">
+                    <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                        <div class="profile-back"></div>
+                        <img src="{{ MEDIA_URL }}full_membership.jpg" alt="" class="rounded-circle profile-pic">
+                        <h3 class="profile-name">Full Membership</h3>
+                        <p class="profile-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate,
+                            itaque fuga reiciendis ex voluptas voluptatum minima necessitatibus, placeat ducimus
+                            corrupti maxime quisquam nostrum eum voluptates iure consequatur illo. Ut maiores non
+                            aspernatur numquam totam a quae libero, quibusdam est, nam beatae eius sequi rem quas iusto
+                            fugit optio doloremque!</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
 
-    {% block extra_js %}
-        <script>
-            AOS.init();
-        </script>
-    {% endblock extra_js %}
-    
+{% block extra_js %}
+<script>
+    AOS.init();
+</script>
+{% endblock extra_js %}
+
 {% endblock content %}

@@ -12,12 +12,12 @@
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
             crossorigin="anonymous">
 
-        {% block extra_css %}
-        {% endblock extra_css %}
-
-
         <!-- Additional styling -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+        
+        {% block extra_css %}
+        {% endblock extra_css %}
 
         <title>Moksha Centre</title>
     </head>
@@ -40,7 +40,7 @@
                             <a class="nav-link active" href="#story" data-toggle="collapse" data-target="#navcol-1.show">About</a            >
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#membership" data-toggle="collapse" data-target="#navcol-1.show">Membership</a>
+                            <a class="nav-link active" href="{% url 'home' %}#membership" data-toggle="collapse" data-target="#navcol-1.show">Membership</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" href="#top_products" data-toggle="collapse" data-target="#navcol-1.show">Top Products</a>
@@ -58,15 +58,6 @@
                 </div>
             </div>
         </nav>
-        <div class="jumbtron" id="home">
-            <div id="home_text">
-                <h1 class="display-1 text-uppercase text-center" id="home_text__heading">
-                    The<br>Moksha<br>Centre
-                </h1>
-                <hr id="home_text__under">
-                <p class="text-center">A liberating experience</p>
-            </div>
-        </div>
         
 
         {% block content %} {% endblock content %}
