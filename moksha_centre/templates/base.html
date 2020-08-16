@@ -8,13 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         {% block corecss %}
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-            crossorigin="anonymous">
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+                crossorigin="anonymous">
 
-        <!-- Additional styling -->
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <!-- Additional styling -->
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock corecss %}
 
         
@@ -24,7 +24,7 @@
         <title>Moksha Centre</title>
     </head>
     <body>
-        <nav class="navbar navbar-light navbar-expand-md fixed-top shadow" style="background-color: rgba(255, 255, 255, 0.7);">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top shadow" style="background-color: rgba(255, 255, 255, 0.7);">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="{{ MEDIA_URL }}logo.png" style="max-height: 40px; color: rgba(255, 255, 255, 0.9);" />
@@ -34,42 +34,73 @@
                         <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown">Clothing</a>
+                            <div class="dropdown-menu mt-3 pt-0">
+                                <a href="#" class="dropdown-item disabled dropdown_subtitle">Men</a>
+                                <a href="#" class="dropdown-item">Pants</a>
+                                <a href="#" class="dropdown-item">T-shirts</a>
+                                <a href="#" class="dropdown-item disabled dropdown_subtitle">Women</a>
+                                <a href="#" class="dropdown-item">Pants</a>
+                                <a href="#" class="dropdown-item">T-shirts</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown">Equipment</a>
+                            <div class="dropdown-menu mt-3 pt-0">
+                                <a href="#" class="dropdown-item">Yoga mats</a>
+                                <a href="#" class="dropdown-item">Yoga blocks</a>
+                                <a href="#" class="dropdown-item">Yoga belts</a>
+                                <a href="#" class="dropdown-item">T-shirts</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">Nutrition</a>
+                        </li>
+                    </ul>
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#home" data-toggle="collapse" data-target="#navcol-1.show">Home</a>
+                            <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#story" data-toggle="collapse" data-target="#navcol-1.show">About</a            >
+                            <a class="nav-link" href="#story">About</a            >
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="{% url 'home' %}#membership" data-toggle="collapse" data-target="#navcol-1.show">Membership</a>
+                            <a class="nav-link" href="#membership">Membership</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#top_products" data-toggle="collapse" data-target="#navcol-1.show">Top Products</a>
+                            <a class="nav-link" href="#new_products" data-toggle="collapse" data-target="#navcol-1.show">New in store</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#follow" data-toggle="collapse" data-target="#navcol-1.show">Forum</a>
+                            <a class="nav-link" href="#forum" data-toggle="collapse" data-target="#navcol-1.show">Forum</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#offers" data-toggle="collapse" data-target="#navcol-1.show">Offers</a>
+                            <a class="nav-link" href="#offers" data-toggle="collapse" data-target="#navcol-1.show">Offers</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#contact" data-toggle="collapse" data-target="#navcol-1.show">Contact</a>
+                            <a class="nav-link" href="#contact" data-toggle="collapse" data-target="#navcol-1.show">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        {% if messages %}
+            <div class="message_container"></div>
+        {% endif %}
         
 
         {% block content %} {% endblock content %}
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+        {% block corejs %}
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        {% endblock corejs %}
 
         {% block extra_js %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         {% endblock extra_js %}
     </body>
 </html>

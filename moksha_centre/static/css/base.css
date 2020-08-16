@@ -10,6 +10,7 @@ body {
     color: white;
 }
 
+
 #home {
     height: 100vh;
     background-color: rgba(233, 236, 239, 0);
@@ -29,25 +30,29 @@ body {
     width: 300px;
 }
 
-#membership {
-    background-color: rgba(255, 255, 255, 0.88);
-    position: relative;
+#forum, #membership, #new_products, #offers {
+    position: absolute;
+    top: -65px;
 }
 
-#offers_container {
-    background-color: rgba(255,255,255,.5);
+#contact, #story{
+    position: absolute;
+    top: -66px;
+}
+
+#contact_container {
+    position: relative;
 }
 
 #story_container {
-    background-color: rgba(255,255,255,.7);
-    overflow-x: hidden;
+    background-color: rgba(255,255,255,0.5);
     position: relative;
 }
 
-#top_products__container {
-    background-color: rgba(255,255,255,0.5);
+#membership_container, #new_container, #offers_container {
+    background-color: rgba(255,255,255,0.79);
     position: relative;
-  }  
+}
 
 .display-1 {
     font-size: 5rem;
@@ -63,6 +68,16 @@ body {
 
 .nav-link.active {
     color: black;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-nav > li > .dropdown-menu > .dropdown_subtitle {
+    background-color: rgba(254, 99, 22, .6);
+    color: white;
+    padding-top: 0;
 }
 
 .parallax {

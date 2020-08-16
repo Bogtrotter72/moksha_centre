@@ -1,0 +1,510 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFETPE1006PI",
+            "manufacturer": "urban fitness",
+            "name": "6mm TPE YOGA MAT | PINK",
+            "description": "Textured surface on each side for better grip and comfort while you practice.  Ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "pink",
+            "dimensions": "183cm x 61cm x 6mm",
+            "price": 24.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20MATS/EQUFETPE1000PI.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFETPE1006BLU",
+            "manufacturer": "urban fitness",
+            "name": "6mm TPE YOGA MAT | BLUE",
+            "description": "Textured surface on each side for better grip and comfort while you practice.  Ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "blue",
+            "dimensions": "183cm x 61cm x 6mm",
+            "price": 24.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20MATS/EQUFETPE1000BLU.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFETPE1006GRN",
+            "manufacturer": "urban fitness",
+            "name": "6mm TPE YOGA MAT | GREEN",
+            "description": "Textured surface on each side for better grip and comfort while you practice.  Ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "green",
+            "dimensions": "183cm x 61cm x 6mm",
+            "price": 24.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139947/The%20Moksha%20Centre/YOGA%20MATS/EQUFETPE1000GRN.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFETPE1004PI",
+            "manufacturer": "urban fitness",
+            "name": "4mm TPE YOGA MAT | PINK",
+            "description": "Textured surface on each side for better grip and comfort while you practice.  Ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "pink",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 19.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20MATS/EQUFETPE1000PI.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFETPE1004BLU",
+            "manufacturer": "urban fitness",
+            "name": "4mm TPE YOGA MAT | BLUE",
+            "description": "Textured surface on each side for better grip and comfort while you practice.  Ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "blue",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 19.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20MATS/EQUFETPE1000BLU.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFETPE1004GRN",
+            "manufacturer": "urban fitness",
+            "name": "4mm TPE YOGA MAT | GREEN",
+            "description": "Textured surface on each side for better grip and comfort while you practice.  Ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "green",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 19.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139947/The%20Moksha%20Centre/YOGA%20MATS/EQUFETPE1000GRN.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFM1104PI",
+            "manufacturer": "urban fitness",
+            "name": "4mm YOGA MAT | PINK",
+            "description": "Lightweight workout mat; ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "pink",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 14.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596208336/The%20Moksha%20Centre/YOGA%20MATS/EQUFM1100PI.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFM1104BLU",
+            "manufacturer": "urban fitness",
+            "name": "4mm YOGA MAT | BLUE",
+            "description": "Lightweight workout mat; ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "blue",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 14.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596208336/The%20Moksha%20Centre/YOGA%20MATS/EQUFM1100BLU.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQUFM1104GRN",
+            "manufacturer": "urban fitness",
+            "name": "4mm YOGA MAT | GREEN",
+            "description": "Lightweight workout mat; ideal for yoga, pilates, fitness, physio sessions and much more.",
+            "color": "GREEN",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 14.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596208336/The%20Moksha%20Centre/YOGA%20MATS/EQUFM1100GRN.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMWARR2004RED",
+            "manufacturer": "fitness mad",
+            "name": "4mm WARRIOR II YOGA MAT | RED",
+            "description": "Vibrant, exciting two-tone mat. Independently tested as AZO and DOP free by SGS Labs.",
+            "color": "two-tone red",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 21.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139947/The%20Moksha%20Centre/YOGA%20MATS/EQFMWARR2000RED.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMWARR2004PUR",
+            "manufacturer": "fitness mad",
+            "name": "4mm WARRIOR II YOGA MAT | PURPLE",
+            "description": "Vibrant, exciting two-tone mat. Independently tested as AZO and DOP free by SGS Labs.",
+            "color": "purple",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 21.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139948/The%20Moksha%20Centre/YOGA%20MATS/EQFMWARR2000PUR.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMWARR2004GRN",
+            "manufacturer": "fitness mad",
+            "name": "4mm WARRIOR II YOGA MAT | GREEN",
+            "description": "Vibrant, exciting two-tone mat. Independently tested as AZO and DOP free by SGS Labs.",
+            "color": "green",
+            "dimensions": "183cm x 61cm x 4mm",
+            "price": 21.95,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139947/The%20Moksha%20Centre/YOGA%20MATS/EQFMWARR2000GRN.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFYB2150GRP",
+            "manufacturer": "fitness mad",
+            "name": "50mm FULL YOGA BLOCK| GRAPHITE",
+            "description": "For use as cushioning in inversions.",
+            "color": "graphite",
+            "dimensions": "305mm x 205mmcm x 50mm",
+            "price": 6.10,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139947/The%20Moksha%20Centre/YOGA%20BLOCKS/EQFMFYB2150GRP.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFYB2150PUR",
+            "manufacturer": "fitness mad",
+            "name": "50mm FULL YOGA BLOCK| PURPLE",
+            "description": "For use as cushioning in inversions.",
+            "color": "purple",
+            "dimensions": "305mm x 205mm x 50mm",
+            "price": 6.10,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139947/The%20Moksha%20Centre/YOGA%20BLOCKS/EQFMFYB2150PUR.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFYB2176BAM",
+            "manufacturer": "fitness mad",
+            "name": "76mm FULL YOGA BLOCK| BAMBOO",
+            "description": "For use as cushioning in inversions.",
+            "color": "bamboo",
+            "dimensions": "229mm x 127mm x 76mm",
+            "price": 15.55,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BLOCKS/EQFMFYB2176BAM.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFB2202PUR",
+            "manufacturer": "fitness mad",
+            "name": "2m YOGA BELT | PURPLE",
+            "description": "used to assist in attaining correct posture by providing the required tension of a pose without straining.",
+            "color": "purple",
+            "dimensions": "38mm x 200cm",
+            "price": 9.35,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BELTS/EQFMFB2202PUR.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFB2202GRN",
+            "manufacturer": "fitness mad",
+            "name": "2m YOGA BELT | GREEN",
+            "description": "used to assist in attaining correct posture by providing the required tension of a pose without straining.",
+            "color": "green",
+            "dimensions": "38mm x 200cm",
+            "price": 9.35,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BELTS/EQFMFB2202GRN.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFB2202RBLU",
+            "manufacturer": "fitness mad",
+            "name": "2m YOGA BELT | ROYAL BLUE",
+            "description": "used to assist in attaining correct posture by providing the required tension of a pose without straining.",
+            "color": "royal blue",
+            "dimensions": "38mm x 200cm",
+            "price": 9.35,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BELTS/EQFMFB2202RBLU.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFB22025PUR",
+            "manufacturer": "fitness mad",
+            "name": "2.5m YOGA BELT | PURPLE",
+            "description": "used to assist in attaining correct posture by providing the required tension of a pose without straining.",
+            "color": "purple",
+            "dimensions": "38mm x 200cm",
+            "price": 9.35,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BELTS/EQFMFB2202PUR.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFB22025GRN",
+            "manufacturer": "fitness mad",
+            "name": "2.5m YOGA BELT | GREEN",
+            "description": "used to assist in attaining correct posture by providing the required tension of a pose without straining.",
+            "color": "green",
+            "dimensions": "38mm x 200cm",
+            "price": 9.35,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BELTS/EQFMFB2202GRN.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "EQFMFB22025RBLU",
+            "manufacturer": "fitness mad",
+            "name": "2.5m YOGA BELT | ROYAL BLUE",
+            "description": "used to assist in attaining correct posture by providing the required tension of a pose without straining.",
+            "color": "royal blue",
+            "dimensions": "38mm x 200cm",
+            "price": 9.35,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139946/The%20Moksha%20Centre/YOGA%20BELTS/EQFMFB2202RBLU.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "NUTYNYFLX30120",
+            "manufacturer": "yoga nutrition",
+            "name": "YOGA-FLEX 120 Capsules",
+            "description": "Improves suppleness and flexibility, and reduce post workout muscle and joint pain.",
+            "price": 29.99,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596272972/The%20Moksha%20Centre/YOGA%20NUTRITION/NUTYNYFLX30120.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "NUTYNLBCPX30250",
+            "manufacturer": "yoga nutrition",
+            "name": "LIPOSOMAL LIQUID VITAMIN B COMPLEX - 250 ml",
+            "description": "Yoga Nutrition's Liposomal Vitamin B-Complex uses revolutionary liposomal technology to ensure the highest possible absorption by your body.",
+            "price": 29.99,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139948/The%20Moksha%20Centre/YOGA%20NUTRITION/NUTYNLBCPX30250.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "NUTYNLBNRG30120",
+            "manufacturer": "yoga nutrition",
+            "name": "LIQUID B12 ENERGISER - HIGH STRENGTH",
+            "description": "Liquid B12 Energizer (Methylcobalamin) is a water-soluble vitamin that keeps your nerves and red blood cells healthy.  It is responsible for the smooth functioning of several critical body processes.",
+            "price": 41.99,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139948/The%20Moksha%20Centre/YOGA%20NUTRITION/NUTYNLBNRG30120.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLFEVER4000GRYBLU",
+            "manufacturer": "everlast",
+            "name": "EVERLAST SEAMLESS TIGHTS LADIES",
+            "description": "Full-length, Everlast Seamless Tights with an elasticated waistband for extra comfort. They feature flat lock seams to prevent chafing and are of a lightweight construction.",
+            "color": "gray blue",
+            "price": 18.00,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139948/The%20Moksha%20Centre/YOGA%20PANTS/CLFEVER4000GRYBLU.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLFEVER4000GRYRED",
+            "manufacturer": "everlast",
+            "name": "EVERLAST SEAMLESS TIGHTS LADIES",
+            "description": "Full-length, Everlast Seamless Tights with an elasticated waistband for extra comfort. They feature flat lock seams to prevent chafing and are of a lightweight construction.",
+            "color": "gray red",
+            "price": 18.00,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596139948/The%20Moksha%20Centre/YOGA%20PANTS/CLFEVER4000GRYRED.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLMKARR5100BLKBLU",
+            "manufacturer": "karrimor",
+            "name": "KARRIMOR RUN TIGHTS MENS",
+            "description": "Crafted with mesh panels and reflective details, these breathable and quick drying tights are ideal for intense sessions. The elasticated waistband and internal drawstring fastening provide a comfortable fit.",
+            "color": "black blue",
+            "price": 19.20,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596273934/The%20Moksha%20Centre/YOGA%20PANTS/CLMKARR5100BLKBLU.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLFKARR5000TACTBLU",
+            "manufacturer": "karrimor",
+            "name": "KARRIMOR X OM ACTIVE T SHIRT LADIES",
+            "description": "The mixture of bamboo and organic cotton naturally wick away moisture to keep you dry.  It is also ultra-soft and feels amazing to the touch.",
+            "color": "blue",
+            "price": 16.80,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLFKARR5000TACTBLU.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLFKARR5000TDBLNUD",
+            "manufacturer": "karrimor",
+            "name": "KARRIMOR X OM DBL T SHIRT LADIES",
+            "description": "Eco-friendly leisure lounge wear.  The natural benefit of bamboo is that it naturally wicks away moisture to keep you dry.  It is also ultra-soft and feels amazing to the touch.",
+            "color": "nude blue",
+            "price": 21.60,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLFKARR5000TDBLNUD.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLFEVER4000TLONCHAR",
+            "manufacturer": "everlast",
+            "name": "EVERLAST LONG SLEEVE T SHIRT LADIES",
+            "description": "Crafted with long sleeves and a crew neck. Features flat lock seams to prevent chafing.",
+            "color": "charcoal",
+            "price": 9.00,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLFEVER4000TLONCHAR.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLFEVER4000TLONBLU",
+            "manufacturer": "everlast",
+            "name": "EVERLAST LONG SLEEVE T SHIRT LADIES",
+            "description": "Crafted with long sleeves and a crew neck. Features flat lock seams to prevent chafing.",
+            "color": "blue",
+            "price": 9.00,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLFEVER4000TLONBLU.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLMKARR5100TORGBLU",
+            "manufacturer": "karrimor",
+            "name": "KARRIMOR ORGANIC T SHIRT MENS",
+            "description": "The cotton rich material offers a great deal of comfort.",
+            "color": "blue",
+            "price": 6.60,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLMKARR5100TORGBLU.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLMKARR5100TORGGRN",
+            "manufacturer": "karrimor",
+            "name": "KARRIMOR ORGANIC T SHIRT MENS",
+            "description": "The cotton rich material offers a great deal of comfort.",
+            "color": "green",
+            "price": 6.60,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLMKARR5100TORGGRN.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLMEVER4100TLONGRY",
+            "manufacturer": "everlast",
+            "name": "EVERLAST LONG SLEEVE T SHIRT MENS",
+            "description": "Crafted with long sleeves and a crew neck. Features flat lock seams to prevent chafing.",
+            "color": "gray",
+            "price": 9.60,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLMEVER4100TLONGRY.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "sku": "CLMEVER4100TLONBLK",
+            "manufacturer": "everlast",
+            "name": "EVERLAST LONG SLEEVE T SHIRT MENS",
+            "description": "Crafted with long sleeves and a crew neck. Features flat lock seams to prevent chafing.",
+            "color": "black",
+            "price": 9.60,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/bogtrotter72/image/upload/v1596275546/The%20Moksha%20Centre/T%20SHIRTS/CLMEVER4100TLONBLK.jpg"
+        }
+    }
+]
