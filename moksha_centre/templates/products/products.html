@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="overlay"></div>
+<div id="products">
+    <div class="container" id="products_container">
+        <div class="row">
+            <div class="col text-uppercase text-center my-5">
+                <h1>Products</h1>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row my-3">
+            {% for product in products %}
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 my-2">
+                <div class="card shadow"><a href="{% url 'product_detail' product.id %}"><img class="img-fluid"
+                            src="{{ product.image_url }}"></a>
+                    <div class="card-body">
+                        <h6 class="card-title one_line text-center">{{product.name}}</h6>
+                        <div class="row">
+                            <div class="col-6 mx-auto"><button class="btn btn-primary btn-block"
+                                    type="button">Info</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

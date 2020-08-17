@@ -6,10 +6,17 @@ body {
     background-size: cover;
 }
 
-#contact_container {
-    color: white;
+
+#contact, #story{
+    position: absolute;
+    top: -66px;
 }
 
+#contact_container {
+    position: relative;
+    color: white;
+
+}
 
 #home {
     height: 100vh;
@@ -35,22 +42,20 @@ body {
     top: -65px;
 }
 
-#contact, #story{
-    position: absolute;
-    top: -66px;
+#membership_container, #new_container, #offers_container {
+    background-color: rgba(255,255,255,0.79);
+    position: relative;
 }
 
-#contact_container {
-    position: relative;
+#products_container {
+    left: 50%;
+    position: absolute;
+    top: 20%;
+    transform: translateX(-50%)
 }
 
 #story_container {
     background-color: rgba(255,255,255,0.5);
-    position: relative;
-}
-
-#membership_container, #new_container, #offers_container {
-    background-color: rgba(255,255,255,0.79);
     position: relative;
 }
 
@@ -71,13 +76,34 @@ body {
 }
 
 .navbar-nav > li > .dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: white;
+}
+
+.navbar.scrolled_down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav > li > .dropdown-menu > .dropdown_subtitle {
     background-color: rgba(254, 99, 22, .6);
     color: white;
     padding-top: 0;
+}
+
+.one_line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .parallax {
@@ -87,6 +113,37 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+}
+
+.search_container {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 7%;
+    z-index: 200;
+}
+
+.search_container.scrolled_down {
+    background-color: #343a40;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.search_form-control {
+    background: transparent;
+    border: 1px solid #343a40;
+}
+
+.search_form-control.scrolled_down {
+    background: white;
+    border: 1px solid white;
+}
+
+.search_form-control::placeholder {
+    color: #343a40;
+}
+
+.search_form-control::placeholder.scrolled_down {
+    color: white;
 }
 
 .shadow {
