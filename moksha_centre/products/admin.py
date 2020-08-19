@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product
+from .models import CarouselImage, Product
 
 # Register your models here.
 
@@ -17,3 +17,10 @@ class ProductAdmin(admin.ModelAdmin):
 
     def tag_list(self, obj):
         return u", ".join(o.name for o in obj.tags.all())
+
+@admin.register(CarouselImage)
+class CarouselImageAdmin(admin.ModelAdmin):
+    list_display = ('product_sku', 'image_url')
+
+    def product_sku(self, obj):
+        return obj.product.sku

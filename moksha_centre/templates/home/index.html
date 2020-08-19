@@ -262,16 +262,16 @@
 {% endblock content %}
 
 {% block extra_js %}
-<script src="{% static 'js/smooth_scroll.js' %}"></script>
+    <script src="{% static 'js/smooth_scroll.js' %}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
 
-<script>
-    AOS.init({
-        disable: function () {
-            var maxWidth = 1024;
-            return window.innerWidth < maxWidth;
-        }
-    });
-</script>
+    <script>
+        AOS.init({
+            disable: function () {
+                var maxWidth = 1024;
+                return window.innerWidth < maxWidth;
+            }
+        });
+    </script>
 {% endblock extra_js %}

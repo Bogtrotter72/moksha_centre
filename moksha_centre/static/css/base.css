@@ -54,6 +54,13 @@ body {
     transform: translateX(-50%)
 }
 
+#product_detail_container {
+    left: 50%;
+    position: absolute;
+    top: 20%;
+    transform: translateX(-50%)
+}
+
 #story_container {
     background-color: rgba(255,255,255,0.5);
     position: relative;
@@ -61,6 +68,10 @@ body {
 
 .display-1 {
     font-size: 5rem;
+}
+
+.fa-chevron-circle-left, .fa-chevron-circle-right {
+    color: #83647A;
 }
 
 .home_contact_form {
@@ -97,7 +108,7 @@ body {
 }
 
 .overlay {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(255, 255, 255);
     height: 100%;
     left: 0;
     position: fixed;
