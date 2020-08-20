@@ -1,0 +1,1 @@
+web: gunicorn moksha_centre.wsgi:application
