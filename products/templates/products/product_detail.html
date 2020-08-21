@@ -3,12 +3,11 @@
 
 
 {% block content %}
-    <div class="overlay"></div>
     <div class="container" id="product_detail_container">
         <div class="row">
             {% if carousel_images %}
                 <div class="col-md-6">
-                    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+                    <div class="carousel" data-ride="carousel" id="carousel-1">
                         <div class="carousel-inner" role="listbox">
                             {% for image in carousel_images %}
                                 <div class="carousel-item {% if forloop.first %}active {% endif %} ">

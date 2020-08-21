@@ -1,0 +1,24 @@
+/* IDs */
+#content { 
+    float:left;
+    width:60%;
+    padding:0 0 0 30px; 
+}
+
+#forum_post_container {
+    margin-top: 10%;
+    min-height: 100vh;
+    position: relative;
+}
+
+#sidebar { 
+    padding:10px;
+    height:100%;
+}
+
+p.date { 
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic; 
+}

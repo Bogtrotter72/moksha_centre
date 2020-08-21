@@ -1,13 +1,23 @@
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, render
 from .models import CarouselImage, Product
 
-# Create your views here.
-
 
 def all_products(request):
-    products = Product.objects.all()
+    object_list = Product.objects.all()
+
+    # limit products to 20 per page
+    paginator = Paginator(object_list, 20)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
     context = {
+        'page': page,
         'products': products,
     }
 

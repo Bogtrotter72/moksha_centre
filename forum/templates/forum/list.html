@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/forum_posts.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="container-fluid" id="forum_post_container">
+        <div class="container d-flex justify-content-center mb-5" id="pagination_container">
+            {% include 'includes/pagination.html' with page=products %}
+        </div>
+        <div class="row">
+            <div class="col-3" id="sidebar">
+                <h2>Forum highlights</h2>
+                <p>Moksha Centre</p>
+                <p>Total posts to date:</p>
+                <h3>Latest posts</h3>
+            </div>
+            <div class="col-9" id="content">
+                <h>Moksha Centre Forum</h>
+                <p>Hello and welcome to the Moksha Centre user forum.  Ask questions, find answers and share your knowledge and experience on Yoga and Pilates, teacher training, meditation, mindfulness, healthy food, spirituality, creativity, events and more.</p>
+                <div id="forum_posts">
+                    {% for post in posts %}
+                        <h3>
+                            <a href="{{ post.get_absolute_url }}">
+                                {{ post.title }}
+                            </a>
+                        </h3>
+                        <p class="date">
+                            Published {{ post.published }} by {{ post.author }}
+                        </p>
+                        {{ post.body|truncatewords:30 }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center mb-5" id="pagination_container">
+        {% include 'includes/pagination.html' with page=products %}
+    </div>
+    
+{% endblock content %}

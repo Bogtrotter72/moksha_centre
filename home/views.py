@@ -17,10 +17,12 @@ def home(request):
             elif tag.name == 'offer':
                 offers.append(product)
 
+    bg_img = True
 
     context = {
         'offers': offers,
         'recent_products': recent_products,
+        "bg_img": bg_img,
     }
 
     return render(request, 'home/index.html', context)
