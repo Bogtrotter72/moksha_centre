@@ -11,14 +11,9 @@
             {% include 'includes/pagination.html' with page=products %}
         </div>
         <div class="row">
-            <div class="col-3" id="sidebar">
-                <h2>Forum highlights</h2>
-                <p>Moksha Centre</p>
-                <p>Total posts to date:</p>
-                <h3>Latest posts</h3>
-            </div>
-            <div class="col-9" id="content">
-                <h>Moksha Centre Forum</h>
+            {% include 'includes/sidebar.html' %}
+            <div class="col-8" id="content">
+                <h1>Moksha Centre Forum</h1>
                 <p>Hello and welcome to the Moksha Centre user forum.  Ask questions, find answers and share your knowledge and experience on Yoga and Pilates, teacher training, meditation, mindfulness, healthy food, spirituality, creativity, events and more.</p>
                 <div id="forum_posts">
                     {% for post in posts %}

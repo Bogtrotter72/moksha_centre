@@ -5,10 +5,14 @@
     padding:0 0 0 30px; 
 }
 
-#forum_post_container {
+#forum_post_container, #post_share_container {
     margin-top: 10%;
     min-height: 100vh;
     position: relative;
+}
+
+#post_share_container {
+    margin: 10% auto 5%;
 }
 
 #sidebar { 

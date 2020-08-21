@@ -6,14 +6,23 @@
 {% endblock extra_css %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container" id="forum_post_container">
-        <div id="post_detail">
-            <h3>{{ post.title }}</h3>
-            <p class="date">
-                Published {{ post.published }} by {{ post.author }}
-            </p>
-            {{ post.body }}
+    <div class="container-fluid" id="forum_post_container">
+        <div class="row">
+            {% include 'includes/sidebar.html' %}
+            <div class="col-8" id="content">
+                <div id="post_detail">
+                    <h3>{{ post.title }}</h3>
+                    <p class="date">
+                        Published {{ post.published }} by {{ post.author }}
+                    </p>
+                    {{ post.body }}
+                    <p>
+                        <a href="{% url "forum:post_share" post.id %}">
+                            Share this post
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     
