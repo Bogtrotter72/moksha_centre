@@ -44,24 +44,23 @@
                             <a href="#" class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown">Clothing</a>
                             <div class="dropdown-menu mt-3 pt-0">
                                 <a href="#" class="dropdown-item disabled dropdown_subtitle">Men</a>
-                                <a href="#" class="dropdown-item">Pants</a>
-                                <a href="#" class="dropdown-item">T-shirts</a>
+                                <a href="{% url 'products' %}?tag=clothing,mens,pants" class="dropdown-item">Pants</a>
+                                <a href="{% url 'products' %}?tag=clothing,mens,shirt" class="dropdown-item">T-shirts</a>
                                 <a href="#" class="dropdown-item disabled dropdown_subtitle">Women</a>
-                                <a href="#" class="dropdown-item">Pants</a>
-                                <a href="#" class="dropdown-item">T-shirts</a>
+                                <a href="{% url 'products' %}?tag=clothing,ladies,pants" class="dropdown-item">Pants</a>
+                                <a href="{% url 'products' %}?tag=clothing,ladies,shirt" class="dropdown-item">T-shirts</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown">Equipment</a>
                             <div class="dropdown-menu mt-3 pt-0">
-                                <a href="#" class="dropdown-item">Yoga mats</a>
-                                <a href="#" class="dropdown-item">Yoga blocks</a>
-                                <a href="#" class="dropdown-item">Yoga belts</a>
-                                <a href="#" class="dropdown-item">T-shirts</a>
+                                <a href="{% url 'products' %}?tag=equipment,yoga,mat" class="dropdown-item">Yoga mats</a>
+                                <a href="{% url 'products' %}?tag=equipment,yoga,belt" class="dropdown-item">Yoga belts</a>
+                                <a href="{% url 'products' %}?tag=equipment,yoga,block" class="dropdown-item">Yoga blocks</a>
                             </div>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="#">Nutrition</a>
+                            <a class="nav-link" href="{% url 'products' %}?tag=nutrition">Nutrition</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" href="{% url 'products' %}">All products</a>
