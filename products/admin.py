@@ -7,7 +7,7 @@ from .models import CarouselImage, Product
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'manufacturer', 'sku',
-                    'tag_list', 'price', 'rating')
+                    'tag_list', 'has_sizes', 'price', 'rating')
     search_fields = ('name', 'manufacturer')
     ordering = ('name', 'manufacturer')
 

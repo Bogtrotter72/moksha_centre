@@ -27,10 +27,22 @@ def all_products(request):
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     carousel_images = CarouselImage.objects.filter(product__id=product_id)
+    mens = False
+    pants = False
+
+    tags = product.tags.all()
+    for tag in tags:
+        if tag.name == 'mens':
+            mens = True
+        if tag.name == 'pants':
+            pants = True
 
     context = {
-        'product': product,
         'carousel_images': carousel_images,
+        'product': product,
+        'tags': tags,
+        'mens': mens,
+        'pants': pants,
     }
 
     return render(request, 'products/product_detail.html', context)
