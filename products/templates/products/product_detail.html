@@ -34,9 +34,15 @@
                     </div>
                 </div>
             {% else %}
-                <div class="col-md-6">
-                    <img class="w-100 d-block" src="{{ product.image_url }}" alt="{{ product.name }}"></>
-                </div>
+                {% if product.image_url %}
+                    <div class="col-md-6">
+                        <img class="w-100 d-block" src="{{ product.image_url }}" alt="{{ product.name }}"></>
+                    </div>
+                    {% else %}
+                    <div class="col-md-6">
+                        <img class="w-100 d-block" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}"></>
+                    </div>
+                {% endif %}
             {% endif %}
             <div class="col-md-6">
                 <div class="row">

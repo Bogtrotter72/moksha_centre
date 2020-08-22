@@ -63,6 +63,16 @@
     position: relative;
 }
 
+.btn_search {
+    color: #343a40;
+    border-color: #343a40;
+}
+
+.btn_search.scrolled_down {
+    color: white;
+    border-color: white;
+}
+
 .display-1 {
     font-size: 5rem;
 }
@@ -83,8 +93,16 @@
     color: black;
 }
 
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 .navbar-nav > li > .dropdown-menu {
     background-color: white;
+}
+
+.search_container.opaque, .navbar.opaque {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar.scrolled_down {
@@ -118,6 +136,11 @@
     position: fixed;
     top: 7%;
     z-index: 200;
+}
+
+.search_container > form {
+    margin: auto;
+    width: 50%;
 }
 
 .search_container.scrolled_down {

@@ -29,7 +29,7 @@
         <title>Moksha Centre</title>
     </head>
     <body class="{% if bg_img %}bg_img{% endif %}">
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0.7);">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="{{ MEDIA_URL }}logo.png" style="max-height: 40px; color: rgba(255, 255, 255, 0.9);" />
@@ -69,7 +69,7 @@
                     </ul>
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="{% url 'home' %}#home">Home</a>
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#story">About</a            >
@@ -94,12 +94,12 @@
             </div>
         </nav>
         <div class="container-fluid search_container" shadow">
-            <form class="mt-3" style="width: 50%; margin: auto;">
+            <form method="GET" action="{% url 'products' %}" class="mt-3">
                 <div class="form-group">
                     <div class="input-group">
-                        <input class="form-control search_form-control mr-2" type="search" placeholder="Search term">
+                        <input class="form-control search_form-control mr-2" type="text" name="q" placeholder="Search term">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-dark" type="button">Search&nbsp;<i class="fa fa-search"></i></button>
+                            <button class="btn btn_search" type="submit">Search&nbsp;<i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -148,16 +148,22 @@
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
             <script>
-                /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */              
+
+                /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+                prevPos = window.scrollY;
                 $(document).on("scroll", function() {
-                    
-                    console.log(window.scrollY);
+                    currentPos = window.scrollY;
 
-                    window.scrollY >= 100 ? $(".navbar").addClass("scrolled_down") : $(".navbar").removeClass("scrolled_down");
-                    window.scrollY >= 100 ? $(".search_container").addClass("scrolled_down") : $(".search_container").removeClass("scrolled_down");
-                    window.scrollY >= 100 ? $(".search_form-control").addClass("scrolled_down") : $(".search_form-control").removeClass("scrolled_down");
-                    
+                    currentPos > 100 ? $(".navbar").addClass("opaque") : $(".navbar").removeClass("opaque");
+                    currentPos > 100 ? $(".search_container").addClass("opaque") : $(".search_container").removeClass("opaque");
 
+
+                    currentPos >= prevPos + 100 ? $(".navbar").addClass("scrolled_down") : $(".navbar").removeClass("scrolled_down");
+                    currentPos >= prevPos + 100 ? $(".search_container").addClass("scrolled_down") : $(".search_container").removeClass("scrolled_down");
+                    currentPos >= prevPos + 100 ? $(".search_form-control").addClass("scrolled_down") : $(".search_form-control").removeClass("scrolled_down");
+                    currentPos >= prevPos + 100 ? $(".btn_search").addClass("scrolled_down") : $(".btn_search").removeClass("scrolled_down");
+
+                    prevPos = currentPos;
                 });
             </script>
         {% endblock corejs %}
