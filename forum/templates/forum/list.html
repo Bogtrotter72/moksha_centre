@@ -8,7 +8,7 @@
 {% block content %}
     <div class="container-fluid" id="forum_post_container">
         <div class="container d-flex justify-content-center mb-5" id="pagination_container">
-            {% include 'includes/pagination.html' with page=products %}
+            {% include 'includes/pagination.html' with page=posts %}
         </div>
         <div class="row">
             {% include 'includes/sidebar.html' %}
@@ -16,12 +16,24 @@
                 <h1>Moksha Centre Forum</h1>
                 <p>Hello and welcome to the Moksha Centre user forum.  Ask questions, find answers and share your knowledge and experience on Yoga and Pilates, teacher training, meditation, mindfulness, healthy food, spirituality, creativity, events and more.</p>
                 <div id="forum_posts">
+                    {% if tag %}
+                        <h4>Posts tagged with "{{ tag.name }}"</h4>
+                    {% endif %}
                     {% for post in posts %}
                         <h3>
                             <a href="{{ post.get_absolute_url }}">
                                 {{ post.title }}
                             </a>
                         </h3>
+                        <p class="tags">
+                            Tags:
+                            {% for tag in post.tags.all %}
+                                <a href="{% url 'forum:post_list_by_tag' tag.slug %}">
+                                    {{ tag.name }}
+                                </a>
+                                {% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                        </p>
                         <p class="date">
                             Published {{ post.published }} by {{ post.author }}
                         </p>
@@ -32,7 +44,7 @@
         </div>
     </div>
     <div class="container d-flex justify-content-center mb-5" id="pagination_container">
-        {% include 'includes/pagination.html' with page=products %}
+        {% include 'includes/pagination.html' with page=posts %}
     </div>
     
 {% endblock content %}

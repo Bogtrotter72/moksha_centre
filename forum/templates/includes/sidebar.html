@@ -1,6 +1,10 @@
-<div class="col-3" id="sidebar">
-    <h2>Forum highlights</h2>
-    <p>Moksha Centre</p>
-    <p>Total posts to date:</p>
+{% load post_tags %}
+{% load static %}
+
+<div class="col-3 d-none d-md-block border-right" id="sidebar">
+    <h2>Moksha Centre</h2>
+    <h4 class="mb-5">Forum highlights</h4>
+    <p>Total posts to date: {% total_posts %}</p>
     <h3>Latest posts</h3>
+    {% show_latest_posts 3 %}
 </div>
