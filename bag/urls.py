@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import view_bag
+from .views import add_to_bag, view_bag
 
 urlpatterns = [
     path('', view_bag, name="view_bag"),
+    path('add/<item_id>', add_to_bag, name="add_to_bag"),
 ]
