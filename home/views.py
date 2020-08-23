@@ -18,11 +18,13 @@ def home(request):
                 offers.append(product)
 
     bg_img = True
+    home = True
 
     context = {
+        "bg_img": bg_img,
+        "home": home,
         'offers': offers,
         'recent_products': recent_products,
-        "bg_img": bg_img,
     }
 
     return render(request, 'home/index.html', context)

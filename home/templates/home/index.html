@@ -103,12 +103,12 @@
             <h1 class="text-uppercase text-center py-5">New in store</h1>
             <div class="row">
                 {% for recent in recent_products %}
-                <div class="col-sm-6 col-lg-3 mt-2">
+                <div class="col-sm-6 col-lg-4 mt-2">
                     <div class="card shadow" data-aos="zoom-out" data-aos-duration="750"
                         data-aos-delay="{{forloop.counter|mul:"300"}}">
                         <img src="{{ recent.image_url }}" alt="" class="card-img-top w-100 d-block">
                         <div class="card-body">
-                            <h5 class="card-title text-uppercase text-center">{{ recent.name }}</h5>
+                            <h5 class="card-title one_line text-uppercase text-center">{{ recent.name }}</h5>
                             <h6 class="card-subtitle text-muted mb-2">Product colour</h6>
                             <h6 class="card-subtitle text-dark mb-2">
                                 <i class="fas fa-euro-sign"> {{ recent.price }}</i>
@@ -155,12 +155,12 @@
             <h1 class="text-uppercase text-center py-5">Special offers</h1>
             <div class="row">
                 {% for offer in offers %}
-                <div class="col-sm-6 col-lg-3 mt-2">
+                <div class="col-sm-6 col-lg-4 mt-2">
                     <div class="card shadow" data-aos="zoom-in" data-aos-duration="750"
                         data-aos-delay="{{forloop.counter|mul:"300"}}">
                         <img src="{{ offer.image_url }}" alt="" class="card-img-top w-100 d-block">
                         <div class="card-body">
-                            <h5 class="card-title text-uppercase text-center">{{ offer.name }}</h5>
+                            <h5 class="card-title one_line text-uppercase text-center">{{ offer.name }}</h5>
                             <h6 class="card-subtitle text-muted mb-2">Product colour</h6>
                             <h6 class="card-subtitle text-dark mb-2">
                                 <i class="fas fa-euro-sign"> {{ offer.price }}</i>
