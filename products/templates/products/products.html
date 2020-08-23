@@ -11,30 +11,47 @@
             <div class="col text-uppercase text-center my-5">
                 <h1>Products</h1>
                 <hr class="w-50 mb-1">
+                <h5 class="text-muted">
+                    {% if filtered %} {{ returned }} items{% endif %}
+                </h5>
             </div>
         </div>
+
         <div class="row my-3">
             {% for product in products %}
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 my-2">
-                <div class="card shadow">
-                    {% if product.image_url %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
-                            </a>
-                    {% endif %}
-                    <div class="card-body">
-                        <h6 class="card-title one_line text-center">{{product.name}}</h6>
-                        <div class="row">
-                            <div class="col-6 mx-auto"><button class="btn btn-primary btn-block"
-                                    type="button">Info</button></div>
-                        </div>
+                {% if returned == 1 %}
+                    <div class="col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4 my-2">
+                        {% include 'includes/product_card.html' %}
                     </div>
+                {% elif returned == 2 %}
+                    {% if forloop.first %}
+                        <div class="col-12 col-sm-6 col-md-4 offset-md-2 my-2">
+                            {% include 'includes/product_card.html' %}
+                        </div>
+                    {% else %}
+                        <div class="col-12 col-sm-6 col-md-4 my-2">
+                            {% include 'includes/product_card.html' %}
+                        </div>
+                    {% endif %}
+                {% elif returned == 3 %}
+                    {% if forloop.first %}
+                        <div class="col-12 col-sm-6 col-md-4 offset-md-2 my-2">
+                            {% include 'includes/product_card.html' %}
+                        </div>
+                    {% elif forloop.last %}
+                        <div class="col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4 my-2">
+                            {% include 'includes/product_card.html' %}
+                        </div>
+                    {% else %}
+                        <div class="col-12 col-sm-6 col-md-4 my-2">
+                            {% include 'includes/product_card.html' %}
+                        </div>
+                    {% endif %}
+                {% else %}
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 my-2">
+                    {% include 'includes/product_card.html' %}
                 </div>
-            </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

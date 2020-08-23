@@ -1,12 +1,13 @@
 from django.contrib import messages
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.db.models import Q
+from django.db.models import Count, Q
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from .models import CarouselImage, Product
 
 
 def all_products(request):
     object_list = Product.objects.all()
+    filtered = False
     filtered_list = []
     query = None
     tag = None
@@ -34,7 +35,10 @@ def all_products(request):
                 filtered_list.append(product)
                 product_tags = []
 
+        filtered = True
         object_list = filtered_list
+    
+    products_returned = len(object_list)
 
     # limit products to 20 per page
     paginator = Paginator(object_list, 20)
@@ -45,10 +49,14 @@ def all_products(request):
         products = paginator.page(1)
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
+    
+
 
     context = {
+        'filtered': filtered,
         'page': page,
         'products': products,
+        'returned': products_returned,
         'search_term': query,
     }
 
