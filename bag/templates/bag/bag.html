@@ -31,17 +31,17 @@
                                     <td class="align-middle">
                                         <p><strong>{{ item.product.name }}</strong></p>
                                         {% if item.product.has_sizes %}
-                                            <p>Size: {{ item.product.size|upper }}</p>
+                                            <p>Size: {{ item.size|upper }}</p>
                                         {% endif %}
                                     </td>
                                     <td class="align-middle">
+                                        <i class="fas fa-euro-sign"></i>{{ item.product.price }}
+                                    </td>
+                                    <td class="align-middle">
+                                        {{ item.quantity }}
+                                    </td>
+                                    <td class="align-middle">
                                         {{ item.product.price }}
-                                    </td>
-                                    <td class="align-middle">
-                                        {{ item.quantity }}
-                                    </td>
-                                    <td class="align-middle">
-                                        {{ item.quantity }}
                                     </td>
                                 </tr>
                             {% endfor %}
