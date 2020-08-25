@@ -73,11 +73,11 @@ def remove_from_bag(request, item_id):
         if size:                                                            # If the item has a size
             del bag[item_id]['items_by_size'][size]                         # remove the specific size key in the items_by_size dictionary
             if not bag[item_id]['items_by_size']:                           # If items by size is now empty
-                bag.pop(item_id)                                                # remove the item entirely
+                bag.pop(item_id)                                            # remove the item entirely
             messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
 
         else:                                                               # If there is no size
-            bag.pop(item_id)                                                    # remove the item entirely
+            bag.pop(item_id)                                                # remove the item entirely
             messages.success(request, f'Removed {product.name} from your bag')
         
         request.session['bag'] = bag                                        # place bag into the session
