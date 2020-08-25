@@ -2,6 +2,18 @@ header {
     background-color: white;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 #bag_container {
     background-color: rgba(233, 236, 239, 0);
     margin: 10% auto 5%;

@@ -101,7 +101,7 @@ SITE_ID = 1
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = '2ciaran7@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_SECRET_KEY')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
