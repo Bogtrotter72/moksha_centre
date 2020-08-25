@@ -153,6 +153,10 @@ input[type=number] {
     height: 500px;
 }
 
+.remove-item, .update-link {
+    cursor: pointer;
+}
+
 .search_container {
     background-color: rgba(255, 255, 255, 0.7);
     position: fixed;
