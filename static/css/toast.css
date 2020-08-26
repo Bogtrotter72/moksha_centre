@@ -1,0 +1,28 @@
+.error_text {
+    color: #dc3545;
+}
+
+.info_text {
+    color: #17a2b8;
+}
+
+.message_container {
+    background-color: white;
+    max-width: 750px;
+    position: fixed;
+    right: 15px;
+    top: 72px;
+    z-index: 10000;
+}
+
+.success_text {
+    color: #28a745;
+}
+
+.toast {
+    max-width: 500px;
+}
+
+.warning_text {
+    color: #ffc107;
+}

@@ -19,6 +19,7 @@
 
             <!-- Additional styling -->
             <link rel="stylesheet" href="{% static 'css/footer_dark.css' %}">
+            <link rel="stylesheet" href="{% static 'css/toast.css' %}">
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock corecss %}
 
@@ -108,7 +109,25 @@
             </form>
         </div> -->
         {% if messages %}
-            <div class="message_container"></div>
+            <div class="message_container">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        <!-- Error messages -->
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/toast_error.html' %}
+                        <!-- Warning messages -->
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/toast_warning.html' %}
+                        <!-- Success messages -->
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/toast_success.html' %}
+                        <!-- Info messages -->
+                        {% else %}
+                            {% include 'includes/toasts/toast_info.html' %}
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
         {% endif %}
         
 
@@ -152,6 +171,9 @@
         {% endblock corejs %}
 
         {% block extra_js %}
+            <script>
+                $('.toast').toast('show')
+            </script>
         {% endblock extra_js %}
     </body>
 </html>

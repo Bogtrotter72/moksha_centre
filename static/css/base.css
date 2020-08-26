@@ -79,6 +79,11 @@ input[type=number] {
 }
 
 
+.bag_message-wrapper {
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 
 .bg_img {
@@ -123,7 +128,7 @@ input[type=number] {
     background-color: white;
 }
 
-.search_container.opaque, .navbar.opaque {
+.navbar.opaque, .search_container.opaque {
     background-color: rgba(255, 255, 255, 1);
 }
 
@@ -195,4 +200,8 @@ input[type=number] {
 
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.toast_capper {
+    height: 2px;
 }
