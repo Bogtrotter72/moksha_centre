@@ -14,6 +14,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+
 #bag_container {
     background-color: rgba(233, 236, 239, 0);
     margin: 10% auto 5%;
@@ -21,6 +22,8 @@ input[type=number] {
     position: relative;
     z-index: 100;
 }
+
+
 
 #contact, #story{
     position: absolute;
@@ -78,13 +81,11 @@ input[type=number] {
     position: relative;
 }
 
-
 .bag_message-wrapper {
     height: 200px;
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 
 .bg_img {
     background-attachment: fixed;

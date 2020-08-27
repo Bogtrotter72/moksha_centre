@@ -1,0 +1,8 @@
+/* IDs */
+#checkout_container {
+    background-color: rgba(233, 236, 239, 0);
+    margin: 10% auto 5%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 100;
+}
