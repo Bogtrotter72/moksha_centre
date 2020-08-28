@@ -29,11 +29,11 @@
     margin-bottom: 35px;
 }
 
-.forum_subscribe form {
+.forum_subscribe {
     justify-content: center;
 }
 
-.forum_subscribe form .form-control {
+.forum_subscribe {
     background: #eff1f4;
     border: none;
     border-radius: 3px;
@@ -46,31 +46,31 @@
     min-width: 250px;
 }
 
-.forum_subscribe form .btn {
-    padding: 16px 32px;
-    border: none;
-    background: none;
+.forum_subscribe .btn {
+    border: 1px solid #2E3E55;
+    background: #2E3E55;
     box-shadow: none;
-    text-shadow: none;
-    opacity: 0.9;
-    text-transform: uppercase;
+    color: white;
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 0.4px;
     line-height: 1;
+    padding: 16px 32px;
+    text-shadow: none;
+    text-transform: uppercase;
 }
 
-.forum_subscribe form .btn:hover {
-    opacity: 1;
+.forum_subscribe .btn:hover {
+    background: none;
+    color: #2E3E55;    
 }
 
-.forum_subscribe form .btn:active {
+.forum_subscribe .btn:active {
     transform: translateY(1px);
 }
 
-.forum_subscribe form .btn-primary {
+.forum_subscribe .btn-primary {
     background-color: #2E3E55 !important;
-    color: #fff;
     outline: none !important;
 }
 

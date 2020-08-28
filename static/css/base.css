@@ -15,7 +15,7 @@ input[type=number] {
 }
 
 
-#bag_container {
+#bag_container, #logout_container, #signup_container {
     background-color: rgba(233, 236, 239, 0);
     margin: 10% auto 5%;
     min-height: 100vh;

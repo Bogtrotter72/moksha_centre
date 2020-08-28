@@ -96,7 +96,7 @@
                             </span>
                             <span class="text-uppercase">&nbsp;Keep Shopping</span>
                         </a>
-                        <a href="" class="btn btn-outline-dark rounded-0 btn-lg">
+                        <a href="{% url 'checkout' %}" class="btn btn-outline-dark rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
@@ -120,24 +120,24 @@
 {% endblock content %}
 
 {% block extra_js %}
-{{ block.super }}
-{% include 'includes/quantity_input_script.html' %}
+    {{ block.super }}
+    {% include 'includes/quantity_input_script.html' %}
 
-<script>
-    $('.update-link').click(function (e) {
-        $('.update-form').submit();
-    })
+    <script>
+        $('.update-link').click(function (e) {
+            $('.update-form').submit();
+        })
 
-    $('.remove-item').click(function (e) {
-        var csrfToken = "{{ csrf_token }}"
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
-        var data = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
+        $('.remove-item').click(function (e) {
+            var csrfToken = "{{ csrf_token }}"
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('product_size');
+            var url = `/bag/remove/${itemId}/`;
+            var data = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
 
-        $.post(url, data).done(function () {
-            location.reload();
-        });
-    })
-</script>
+            $.post(url, data).done(function () {
+                location.reload();
+            });
+        })
+    </script>
 {% endblock extra_js %}
