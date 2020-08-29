@@ -7,6 +7,25 @@
     z-index: 100;
 }
 
+#loading_overlay {
+    background: rgba(131, 100, 122, .9);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.loading_spinner {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
 .StripeElement {
     background-color: white;
     border: 1px solid #ced4da;

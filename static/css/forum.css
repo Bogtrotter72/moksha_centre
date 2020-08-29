@@ -84,9 +84,10 @@
 
 
 #forum_container {
-    position: relative;
     background-color: rgba(131, 100, 122, .9);
     height: 500px;
+    position: relative;
+    width: 100%;
 }
 
 #forum_signup {

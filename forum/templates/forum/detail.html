@@ -55,11 +55,21 @@
                     {% if new_comment %}
                         <h4>Your comment has been added.</h4>
                     {% else %}
-                        <form method="post">
-                            {{ comment_form.as_p }}
-                            {% csrf_token %}
-                            <p><input type="submit" value="Add comment"></p>
-                        </form>
+                        <div class="col-12 col-lg-6">
+                            <form method="post">
+                                {% csrf_token %}
+                                <!-- {{ comment_form.as_p }} -->
+                                {{ comment_form.name | as_crispy_field }}
+                                {{ comment_form.email | as_crispy_field }}
+                                {{ comment_form.body | as_crispy_field }}
+                                <small>* Asterisk indicates a required field.</small>
+                                <div class="my-5 text-right">
+                                    <button id="submit_button" type="submit" class="btn btn-outline-dark">
+                                        <span>Add comment</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     {% endif %}
                 </div>
             </div>

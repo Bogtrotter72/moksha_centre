@@ -28,10 +28,10 @@ card.addEventListener('change', function(event) {
     var errorDiv = document.getElementById('card_errors');
     if (event.error) {
         var html = `
-            <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-            </span>
-            <span>${event.error.message}</span>
+        <span class="icon" role="alert">
+        <i class="fas fa-times"></i>
+        </span>
+        <span>${event.error.message}</span>
         `;
         $(errorDiv).html(html);
     } else {
@@ -39,74 +39,36 @@ card.addEventListener('change', function(event) {
     }
 });
 
-var form = document.getElementById('payment_form');
+var form = document.getElementById('payment_form')
 
 form.addEventListener('submit', function(ev) {
+    // Prevent the form from submitting until after the payment succeeds
     ev.preventDefault();
-    card.update({'disabled': true});
-    $('#submit_button').attr('disabled', true);
+    card.update({ 'disabled': true});
+    $('#submit-button').attr('disabled', true);
     $('#payment_form').fadeToggle(100);
-    $('#loading-overlay').fadeToggle(100);
-
-    var saveInfo = Boolean($('#save_info').attr('checked'));
-    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
-    var postData = {
-        'csrfmiddlewaretoken': csrfToken,
-        'client_secret': clientSecret,
-        'save_info': saveInfo,
-    };
-    var url = '/checkout/cache_checkout_data/';
-
-    $.post(url, postData).done(function() {
-        stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: card,
-                billing_details: {
-                    name: $.trim(form.full_name.value),
-                    email: $.trim(form.email.value),
-                    address: {
-                        line1: $.trim(form.street_address1.value),
-                        line2:$.trim(form.street_address2.value),
-                        city: $.trim(form.town_or_city.value),
-                        state: $.trim(form.county.value),
-                        country: $.trim(form.country.value)
-                    }
-                }
-            },
-            shipping: {
-                name: $.trim(form.full_name.value),
-                address: {
-                    line1: $.trim(form.street_address1.value),
-                    line2:$.trim(form.street_address2.value),
-                    city: $.trim(form.town_or_city.value),
-                    state: $.trim(form.county.value),
-                    country: $.trim(form.country.value),
-                    postal_code: $.trim(form.postcode.value)
-                }
+    $('#loading_overlay').fadeToggle(100);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function(result) {
+        if (result.error) {
+            var errorDiv = document.getElementById('card-errors');
+            var html = `
+                <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            $('#payment_form').fadeToggle(100);
+            $('#loading_overlay').fadeToggle(100);
+            card.update({ 'disabled': false});
+            $('#submit-button').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
             }
-        }).then(function(result) {
-            if (result.error) {
-                var errorDiv = document.getElementById('card_errors');
-                var html = `
-                    <span class="icon" role="alert">
-                        <i class="fas fa-times"></i>
-                    </span>
-                    <span>${result.error.message}</span>
-                `;
-                $(errorDiv).html(html);
-                $('#payment_form').fadeToggle(100);
-                $('#loading-overlay').fadeToggle(100);
-                card.update({'disabled': false});
-                $('#submit_button').attr('disabled', false);
-            } else {
-                if (result.paymentIntent.status === 'succeeded') {
-                    form.submit();
-                }
-            }
-        });
-    }).fail(function() {
-        // Reload the page, the error will be in Django messages
-        location.reload()
-    })
-
+        }
+    });
 });

@@ -106,21 +106,22 @@
                 <div class="col-sm-6 col-lg-4 mt-2">
                     <div class="card shadow" data-aos="zoom-out" data-aos-duration="750"
                         data-aos-delay="{{forloop.counter|mul:"300"}}">
-                        <img src="{{ recent.image_url }}" alt="" class="card-img-top w-100 d-block">
+                        <a href="{% url 'product_detail' recent.id %}">
+                            <img src="{{ recent.image_url }}" alt="" class="card-img-top w-100 d-block">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title one_line text-uppercase text-center">{{ recent.name }}</h5>
-                            <h6 class="card-subtitle text-muted mb-2">Product colour</h6>
-                            <h6 class="card-subtitle text-dark mb-2">
-                                <i class="fas fa-euro-sign"> {{ recent.price }}</i>
-                            </h6>
+
+                            <!-- If no product colour enter an empty space to ensure card sizes match -->
+                            <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">{% if recent.color %}{{ recent.color }}{% else %}&nbsp;{% endif %}</h6>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-outline-dark btn-block" type="button">
-                                        <i class="fab fa-opencart"></i>
+                                    <button class="btn btn-outline-dark btn-block disabled">
+                                        <i class="fas fa-euro-sign"> {{ recent.price }}</i>
                                     </button>
                                 </div>
                                 <div class="col-6">
-                                    <a class="btn btn-info btn-block text-light" role="button">Info</a>
+                                    <a href="{% url 'product_detail' recent.id %}" class="btn btn-info btn-block text-light" role="button">Info</a>
                                 </div>
                             </div>
                         </div>
@@ -154,17 +155,18 @@
                 <div class="col-sm-6 col-lg-4 mt-2">
                     <div class="card shadow" data-aos="zoom-in" data-aos-duration="750"
                         data-aos-delay="{{forloop.counter|mul:"300"}}">
-                        <img src="{{ offer.image_url }}" alt="" class="card-img-top w-100 d-block">
+                        <a href="{% url 'product_detail' offer.id %}">
+                            <img src="{{ offer.image_url }}" alt="" class="card-img-top w-100 d-block">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title one_line text-uppercase text-center">{{ offer.name }}</h5>
-                            <h6 class="card-subtitle text-muted mb-2">Product colour</h6>
-                            <h6 class="card-subtitle text-dark mb-2">
-                                <i class="fas fa-euro-sign"> {{ offer.price }}</i>
-                            </h6>
+
+                            <!-- If no product colour enter an empty space to ensure card sizes match -->
+                            <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">{% if offer.color %}{{ offer.color }}{% else %}&nbsp;{% endif %}</h6>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-outline-dark btn-block" type="button">
-                                        <i class="fab fa-opencart"></i>
+                                    <button class="btn btn-outline-dark btn-block disabled">
+                                        <i class="fas fa-euro-sign"> {{ offer.price }}</i>
                                     </button>
                                 </div>
                                 <div class="col-6">
