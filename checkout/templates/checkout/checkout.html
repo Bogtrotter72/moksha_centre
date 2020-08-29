@@ -19,15 +19,15 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
-                <form action="{% url 'checkout' %}" method="POST" id="payment_form">
+                <form method="POST">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small px-2 w-auto">Details</legend>
+                    <fieldset class="rounded mb-5">
+                        <legend class="fieldset-label small text-dark w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small px-2 w-auto">Delivery Info</legend>
+                        <legend class="fieldset-label small text-dark w-auto">Delivery Info</legend>
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
@@ -46,11 +46,9 @@
                             {% endif %}
                         </div>
                     </fieldset>
-                    <fieldset class="px-3">
+                    <fieldset>
                         <legend class="fieldset-label small px-2 w-auto">Payment Info</legend>
-                        <div class="mb-3" id="card_element">
-                            
-                        </div>
+                        <div class="mb-3" id="card_element"></div>
                         <div class="mb-3 text-danger" id="card_errors" role="alert"></div>
                     </fieldset>
                     <div class="text-right">
@@ -58,7 +56,7 @@
                             <i class="fas fa-chevron-left"></i>
                             <span>Adjust bag</span>
                         </a>
-                        <button id="submit_button" class="btn btn-outline-dark">
+                        <button id="submit_button" type="submit" class="btn btn-outline-dark">
                             <span>Complete Order</span>
                             <i class="fas fa-lock"></i>
                         </button>

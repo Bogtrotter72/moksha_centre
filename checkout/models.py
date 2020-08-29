@@ -25,7 +25,7 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
     
     def update_total(self):
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
     
     def save(self, *args, **kwargs):
@@ -49,4 +49,6 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Product {self.product.name} on order {self.order.order_number}'
+
+        return f'SKU {self.product.sku} on order {self.order.order_number}'
+        # return f'Product {self.product.name} on order {self.order.order_number}'
