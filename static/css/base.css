@@ -12,6 +12,13 @@ h1 {
     font-size: 2.3rem;
 }
 
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.8rem;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button, 
@@ -25,7 +32,9 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-
+table#bag_details {
+    height: 200px;
+}
 
 
 /* ID STYLING */
@@ -73,12 +82,12 @@ input[type=number] {
     width: 300px;
 }
 
-#forum, #membership, #new_products, #offers {
+#forum, #new_products, #offers {
     position: absolute;
-    top: -125px;
+    top: -66px;
 }
 
-#membership_container, #new_container, #offers_container {
+#new_container, #offers_container {
     background-color: rgba(255,255,255,0.79);
     position: relative;
 }

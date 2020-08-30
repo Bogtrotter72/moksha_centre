@@ -20,7 +20,7 @@
 }
 
 .forum_subscribe .intro {
-    font-size: 16px;
+    font-size: 0.8rem;
     max-width: 500px;
     margin: 0 auto 25px;
 }
@@ -73,13 +73,6 @@
     background-color: #2E3E55 !important;
     outline: none !important;
 }
-
-.newsletter-subscribe .intro {
-    font-size: 16px;
-    max-width: 500px;
-    margin: 0 auto 25px;
-  }
-  
   
 
 

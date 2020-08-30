@@ -47,9 +47,6 @@ def add_to_bag(request, item_id):
 
 
 def adjust_bag(request, item_id):
-    bold_start = "\033[1m"
-    bold_end = "\033[0m"
-
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None

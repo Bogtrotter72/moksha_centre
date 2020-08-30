@@ -5,9 +5,21 @@
     #home_text {
         top: 80%;
     }
+
+    #product_detail_container, #products_container {
+        margin: 20% auto 5%;
+    }
 }
 
 @media only screen and (min-width: 576px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .forum_subscribe .intro {
+        font-size: 1rem;
+    }
+    
     .display-1 {
         font-size: 4rem;
     }
@@ -53,6 +65,10 @@
     #home {
         height: 120vh;
     }
+    
+    #product_detail_container, #products_container {
+        margin: 20% auto 5%;
+    }
 }
 
 
@@ -61,12 +77,29 @@
 }
 
 @media only screen and (min-width: 1200px) {
+    .display-1 {
+        font-size: 6rem;
+    }
     
     #home {
         height: 100vh;
     }
+    
+    #home_text {
+        top: 60%;
+    }
+}
 
+@media only screen and (min-width: 1366px) {    
     #home_text {
         top: 50%;
+    }
+    
+    #products_container {
+        margin: 10% auto 5%;
+    }
+    
+    #product_detail_container {
+        margin: 15% auto 5%;
     }
 }
