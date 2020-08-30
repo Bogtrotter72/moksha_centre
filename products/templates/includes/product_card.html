@@ -9,10 +9,16 @@
             </a>
     {% endif %}
     <div class="card-body">
-        <h6 class="card-title one_line text-center">{{product.name}}</h6>
+        <div class="card-title one_line text-center">{{product.name}}</div>
         <div class="row">
-            <div class="col-6 mx-auto"><button class="btn btn-primary btn-block"
-                    type="button">Info</button></div>
+            <div class="col-6">
+                <button class="btn btn-outline-dark btn-block disabled">
+                    <i class="fas fa-euro-sign"> {{ product.price }}</i>
+                </button>
+            </div>
+            <div class="col-6">
+                <a href="{% url 'product_detail' product.id %}" class="btn btn-info btn-block text-light" role="button">Info</a>
+            </div>
         </div>
     </div>
 </div>

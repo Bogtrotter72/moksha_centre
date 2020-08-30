@@ -1,8 +1,17 @@
 /* ELEMENT STYLING */
 
+body {
+    font-size: 0.8rem;
+}
+
 header {
     background-color: white;
 }
+
+h1 {
+    font-size: 2.3rem;
+}
+
 
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button, 
@@ -46,8 +55,8 @@ input[type=number] {
 }
 
 #home {
-    height: 100vh;
     background-color: rgba(233, 236, 239, 0);
+    height: 100vh;
     z-index: 100;
 }
 
@@ -55,7 +64,7 @@ input[type=number] {
     color: white;
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
 }
 
@@ -74,14 +83,9 @@ input[type=number] {
     position: relative;
 }
 
-#products_container {
+#product_detail_container, #products_container {
     position: relative;
-    margin: 10% auto 5%;
-}
-
-#product_detail_container {
-    position: relative;
-    margin: 10% auto 5%;
+    margin: 40% auto 5%;
 }
 
 #story_container {
@@ -116,6 +120,10 @@ input[type=number] {
     background-size: cover;
 }
 
+.btn {
+    font-size: inherit;
+}
+
 .btn_search {
     color: #343a40;
     border-color: #343a40;
@@ -127,7 +135,11 @@ input[type=number] {
 }
 
 .display-1 {
-    font-size: 5rem;
+    font-size: 3rem;
+}
+
+.dropdown-menu {
+    font-size: inherit;
 }
 
 .fa-chevron-circle-left, .fa-chevron-circle-right {
@@ -140,6 +152,10 @@ input[type=number] {
 
 .home_contact_form::placeholder {
     color: white;
+}
+
+.nav-link {
+    padding: 0;
 }
 
 .nav-link.active {
@@ -163,6 +179,10 @@ input[type=number] {
     background-color: rgba(254, 99, 22, .6);
     color: white;
     padding-top: 0;
+}
+
+.navbar-toggler {
+    font-size: 0.8rem;
 }
 
 .one_line {

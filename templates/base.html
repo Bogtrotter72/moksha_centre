@@ -21,6 +21,7 @@
             <link rel="stylesheet" href="{% static 'css/footer_dark.css' %}">
             <link rel="stylesheet" href="{% static 'css/toast.css' %}">
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <link rel="stylesheet" href="{% static 'css/media_queries.css' %}">
         {% endblock corecss %}
 
         
@@ -31,8 +32,8 @@
     </head>
     <body class="{% if bg_img %}bg_img{% endif %}">
         <header class="container-fluid fixed-top shadow">
-            <div class="row d-lg-flex">
-                <div class="d-none d-md-block col-md-6 text-left col-lg-4">
+            <div class="row d-lg-flex pt-2">
+                <div class="d-none d-md-block col-md-6 col-lg-4 text-left">
                     <a href="{% url 'home' %}" class="nav-link">
                         <img src="{{ MEDIA_URL }}logo.png" style="max-height: 40px; color: rgba(255, 255, 255, 0.9);" />
                     </a>
@@ -49,7 +50,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 my-auto py-1 py-lg-0">
+                <div class="col-4 col-md-12 order-md-last">
+                    <nav class="navbar navbar-expand-lg navbar-light w-100">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        {% include 'includes/main_nav.html' %}
+                    </nav>
+                </div>
+                <div class="col-8 col-md-6 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item">
                             <a href="{% url 'home' %}" class="nav-link text-dark">
@@ -88,14 +97,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/main_nav.html' %}
-                </nav>
             </div>
         </header>
         
