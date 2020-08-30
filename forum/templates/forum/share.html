@@ -2,33 +2,43 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/forum_posts.css' %}">
+<link rel="stylesheet" href="{% static 'css/forum_posts.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
+    <div class="background_container"></div>
     <div class="container-fluid" id="post_share_container">
         <div class="row">
             {% include 'includes/sidebar.html' %}
             <div class="col-8" id="content">
                 {% if sent %}
-                    <h1>Email sent successfully</h1>
-                    <p>
-                        "{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }}.
-                    </p>
+                <h1>Email sent successfully</h1>
+                <p>
+                    "{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }}.
+                </p>
                 {% else %}
-                    <h1>Share "{{ post.title }}" by email</h1>
-                    <form method="post">
-                        {% csrf_token %}
-                        {% for field in form %}
-                            <div>
-                                {{ field.label_tag }} {{ field }}
-                            </div>
-                        {% endfor %}
-                        <input type="submit" value="Send mail">
-                    </form>
+                    <h2>Share <em>{{ post.title }}</em> by email</h2>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <form method="post">
+                                {% csrf_token %}
+                                {{ form.name | as_crispy_field }}
+                                {{ form.email | as_crispy_field }}
+                                {{ form.to | as_crispy_field }}
+                                {{ form.comments | as_crispy_field }}
+
+                                <div class="text-right">
+                                    <a href="{% url 'forum:post_list' %}" class="btn btn-outline-info">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span>To Forum</span>
+                                    </a>
+                                    <button type="submit" class="btn btn-outline-dark">Share Post&nbsp;<i class="far fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 {% endif %}
             </div>
         </div>
     </div>
-    
 {% endblock content %}

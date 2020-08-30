@@ -58,7 +58,7 @@
             </div>
             <div class="row membership_cards">
                 <div class="col-sm-6 col-lg-4 membership_card">
-                    <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="profile-card shadow" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="profile-back"></div>
                         <img src="{{ MEDIA_URL }}yoga_membership.jpg" alt="" class="rounded-circle profile-pic">
                         <h3 class="profile-name">Yoga Membership</h3>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 membership_card">
-                    <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="profile-card shadow" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
                         <div class="profile-back"></div>
                         <img src="{{ MEDIA_URL }}pilates_membership.jpg" alt="" class="rounded-circle profile-pic">
                         <h3 class="profile-name">Pilates Membership</h3>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4 membership_card">
-                    <div class="profile-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                    <div class="profile-card shadow" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
                         <div class="profile-back"></div>
                         <img src="{{ MEDIA_URL }}full_membership.jpg" alt="" class="rounded-circle profile-pic">
                         <h3 class="profile-name">Full Membership</h3>
@@ -204,20 +204,13 @@
                     </p>
                 </div>
                 <div class="col-md-12 col-lg-6">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control home_contact_form" name="name" placeholder="Name"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control home_contact_form" name="email" placeholder="Email"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control home_contact_form" name="message"
-                                placeholder="Type your message here..." rows="5" required minlength="10"
-                                maxlength="500"></textarea>
-                        </div>
+                    <form action="{% url 'home' %}#contact" method="POST">
+                        {% csrf_token %}
+
+                        {{ form.name | as_crispy_field }}
+                        {{ form.email | as_crispy_field }}
+                        {{ form.message | as_crispy_field }}
+
                         <div class="form-group text-right">
                             <button class="btn btn-outline-light" type="submit">
                                 Send Message

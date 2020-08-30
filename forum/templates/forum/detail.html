@@ -6,6 +6,7 @@
 {% endblock extra_css %}
 
 {% block content %}
+    <div class="background_container"></div>
     <div class="container-fluid" id="forum_post_container">
         <div class="row">
             {% include 'includes/sidebar.html' %}
@@ -63,10 +64,13 @@
                                 {{ comment_form.email | as_crispy_field }}
                                 {{ comment_form.body | as_crispy_field }}
                                 <small>* Asterisk indicates a required field.</small>
-                                <div class="my-5 text-right">
-                                    <button id="submit_button" type="submit" class="btn btn-outline-dark">
-                                        <span>Add comment</span>
-                                    </button>
+                                <div class="text-right my-5">
+                                    <a href="{% url 'forum:post_list' %}" class="btn btn-outline-info">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span>To Forum</span>
+                                    </a>
+                                    <button type="submit" class="btn btn-outline-dark">Post Comment&nbsp;<i class="far fa-paper-plane"></i></button>
+
                                 </div>
                             </form>
                         </div>

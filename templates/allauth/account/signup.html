@@ -6,12 +6,13 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
+<div class="background_container"></div>
 <div class="container" id="signup_container">
     <div class="col-12 col-lg-6 offset-lg-3 col">
         <form class="signup" action="{% url 'account_signup' %}" method="POST" id="signup_form">
             <h1>{% trans "Sign Up" %}</h1>
 
-            <p class="mb-5">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+            <p class="mb-5">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">login</a>.{% endblocktrans %}</p>
 
             {% csrf_token %}
             <fieldset class="rounded px-3 mb-5">
@@ -22,7 +23,7 @@
                 {{ form.password2 | as_crispy_field }}
             </fieldset>
             <div class="text-right">
-                <button class="btn btn-outline-success" type="submit">{% trans "Sign Up" %}</button>
+                <button class="btn btn-outline-info" type="submit">{% trans "Sign Up" %}</button>
             </div>
         </form>
     </div>
