@@ -1,7 +1,14 @@
-/* ELEMENT STYLING */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* ELEMENTS */
 
 body {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
 }
 
 header {
@@ -37,7 +44,7 @@ table#bag_details {
 }
 
 
-/* ID STYLING */
+/* IDs */
 
 #bag_container, #login_container, #logout_container, #password_container, #signup_container {
     background-color: rgba(233, 236, 239, 0);
@@ -46,7 +53,6 @@ table#bag_details {
     position: relative;
     z-index: 100;
 }
-
 
 #contact, #story{
     position: absolute;
@@ -74,7 +80,9 @@ table#bag_details {
     left: 50%;
     position: absolute;
     top: 60%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 #home_text__under {
@@ -103,10 +111,9 @@ table#bag_details {
 }
 
 
-
-/* CLASS STYLING */
-
+/* CLASSES */
 .background_container {
+    background-image: -o-repeating-linear-gradient(85deg, rgb(255 255 255 / 85%) -77%, rgb(255 255 255 / 85%) 100%), url(../../media/base_background.jpg);
     background-image: repeating-linear-gradient(5deg, rgb(255 255 255 / 85%) -77%, rgb(255 255 255 / 85%) 100%), url(../../media/base_background.jpg);
     height: 100vh;
     position: fixed;
@@ -123,6 +130,7 @@ table#bag_details {
 
 .bg_img {
     background-attachment: fixed;
+    background-image: -o-repeating-linear-gradient(85deg, rgba(254, 124, 0, 0.65) -77%, rgba(254, 124, 0, 0.65) 100%), url(../../media/base_background.jpg);
     background-image: repeating-linear-gradient(5deg, rgba(254, 124, 0, 0.65) -77%, rgba(254, 124, 0, 0.65) 100%), url(../../media/base_background.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -142,11 +150,6 @@ table#bag_details {
     border-color: #343a40;
 }
 
-.btn_search.scrolled_down {
-    color: white;
-    border-color: white;
-}
-
 .display-1 {
     font-size: 3rem;
 }
@@ -159,12 +162,39 @@ table#bag_details {
     color: #83647A;
 }
 
+.form-control-sm {
+    height: calc(1.5em + .5rem + 3px);
+    font-size: inherit;
+    width: 30%;
+}
+
 .home_contact_form {
     background-color: rgba(255, 255, 255, .5);
 }
 
+.home_contact_form::-webkit-input-placeholder {
+    color: white;
+}
+
+.home_contact_form::-moz-placeholder {
+    color: white;
+}
+
+.home_contact_form:-ms-input-placeholder {
+    color: white;
+}
+
+.home_contact_form::-ms-input-placeholder {
+    color: white;
+}
+
 .home_contact_form::placeholder {
     color: white;
+}
+
+.navbar .dropdown-menu.show {
+    min-width: inherit;
+    display: inline-block;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -180,16 +210,11 @@ table#bag_details {
 }
 
 .navbar-nav > li > .dropdown-menu {
-    background-color: white;
+    background-color: #ffc107;
 }
 
 .navbar.opaque, .search_container.opaque {
     background-color: rgba(255, 255, 255, 1);
-}
-
-.navbar.scrolled_down {
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav > li > .dropdown-menu > .dropdown_subtitle {
@@ -205,7 +230,8 @@ table#bag_details {
 .one_line {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
 }
 
 .parallax {
@@ -233,32 +259,34 @@ table#bag_details {
     width: 50%;
 }
 
-.search_container.scrolled_down {
-    background-color: #343a40;
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
-}
-
 .search_form-control {
     background: transparent;
     border: 1px solid #343a40;
 }
 
-.search_form-control.scrolled_down {
-    background: white;
-    border: 1px solid white;
+.search_form-control::-webkit-input-placeholder {
+    color: #343a40;
+}
+
+.search_form-control::-moz-placeholder {
+    color: #343a40;
+}
+
+.search_form-control:-ms-input-placeholder {
+    color: #343a40;
+}
+
+.search_form-control::-ms-input-placeholder {
+    color: #343a40;
 }
 
 .search_form-control::placeholder {
     color: #343a40;
 }
 
-.search_form-control::placeholder.scrolled_down {
-    color: white;
-}
-
 .shadow {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.45)!important;
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,.45)!important;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.45)!important;
 }
 
 .toast_capper {

@@ -13,6 +13,15 @@
                 <h1>Products</h1>
                 <hr class="w-50 mb-1">
                 <h5 class="text-muted">
+                    {% if search_term %}
+                        {% if returned > 0 %}
+                            Your search for {{ search_term }}
+                            <br>returned {{ returned }} item{{ returned|pluralize }}
+                        {% else %}
+                            Your search for {{ search_term }}
+                            <br>returned {{ returned }} items
+                        {% endif %}
+                    {% endif %}
                     {% if filtered %} {{ returned }} items{% endif %}
                 </h5>
             </div>

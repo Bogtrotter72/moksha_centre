@@ -1,19 +1,49 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .profile-back {
-  background-color: #83647A;
-  height: 150px;
-  margin-bottom: -75px;
+    background-color: #83647A;
+    height: 150px;
+    margin-bottom: -75px;
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
+.profile-bio {
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .profile-card {
   text-align: center;
   margin-bottom: 15px;
   border: 1px solid #83647a;
+}
+
+.profile-card .social-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.profile-card .social-list li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.profile-card .social-list li i {
+  background-color: #9b1f1f;
+  color: #fff;
+  padding: 10px 11px;
+  border-radius: 100%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
 }
 
 .profile-name {
@@ -27,31 +57,3 @@
   max-width: 300px;
   margin: 0 auto 10px auto;
 }
-
-.profile-card .social-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.profile-card .social-list li {
-  display: inline;
-  margin: 0 5px;
-  /*background-color: #9b1f1f;*/
-  /*color: #fff;*/
-  /*padding: 10px;*/
-  /*border-radius: 100%;*/
-}
-
-.profile-bio {
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.profile-card .social-list li i {
-  background-color: #9b1f1f;
-  color: #fff;
-  padding: 10px 11px;
-  border-radius: 100%;
-}
-

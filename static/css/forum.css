@@ -1,12 +1,76 @@
-.forum_subscribe {
-    color: white;
-    background-color: #fff;
-    padding: 50px 0;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* IDs */
+#forum_container {
+    background-color: rgba(131, 100, 122, .9);
+    height: 500px;
+    position: relative;
+    width: 100%;
 }
 
-.forum_subscribe p {
+#forum_signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+
+/* CLASSES */
+.forum_subscribe {
+    background: #eff1f4;
+    border: none;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: white;
-    line-height: 1.5;
+    height: 45px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    outline: none;
+    margin-right: 10px;
+    min-width: 250px;
+    padding: 50px 0;
+    text-indent: 9px;
+}
+
+.forum_subscribe .btn {
+    border: 1px solid #2E3E55;
+    background: #2E3E55;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+    padding: 16px 32px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.forum_subscribe .btn:active {
+    -webkit-transform: translateY(1px);
+        -ms-transform: translateY(1px);
+            transform: translateY(1px);
+}
+
+.forum_subscribe .btn:hover {
+    background: none;
+    color: #2E3E55;    
+}
+
+.forum_subscribe .btn-primary {
+    background-color: #2E3E55 !important;
+    outline: none !important;
 }
 
 .forum_subscribe h2 {
@@ -29,71 +93,7 @@
     margin-bottom: 35px;
 }
 
-.forum_subscribe {
-    justify-content: center;
-}
-
-.forum_subscribe {
-    background: #eff1f4;
-    border: none;
-    border-radius: 3px;
-    box-shadow: none;
-    outline: none;
-    color: inherit;
-    text-indent: 9px;
-    height: 45px;
-    margin-right: 10px;
-    min-width: 250px;
-}
-
-.forum_subscribe .btn {
-    border: 1px solid #2E3E55;
-    background: #2E3E55;
-    box-shadow: none;
+.forum_subscribe p {
     color: white;
-    font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 0.4px;
-    line-height: 1;
-    padding: 16px 32px;
-    text-shadow: none;
-    text-transform: uppercase;
+    line-height: 1.5;
 }
-
-.forum_subscribe .btn:hover {
-    background: none;
-    color: #2E3E55;    
-}
-
-.forum_subscribe .btn:active {
-    transform: translateY(1px);
-}
-
-.forum_subscribe .btn-primary {
-    background-color: #2E3E55 !important;
-    outline: none !important;
-}
-  
-
-
-#forum_container {
-    background-color: rgba(131, 100, 122, .9);
-    height: 500px;
-    position: relative;
-    width: 100%;
-}
-
-#forum_signup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #forum_subscribe_email {
-      background-color: transparent;
-  }
-
-  #forum_subscribe_email::placeholder {
-      color: white;
-  }

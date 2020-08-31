@@ -27,19 +27,23 @@
             <link rel="stylesheet" href="{% static 'css/footer_dark.css' %}">
             <link rel="stylesheet" href="{% static 'css/toast.css' %}">
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+            <!-- Extra CSS to extend base.css -->
+            {% block extra_css %}
+            {% endblock extra_css %}
+
+            <!-- Media queries supercedes all -->
             <link rel="stylesheet" href="{% static 'css/media_queries.css' %}">
         {% endblock corecss %}
 
         
-        {% block extra_css %}
-        {% endblock extra_css %}
 
         <title>Moksha Centre</title>
     </head>
     <body class="{% if bg_img %}bg_img{% endif %}">
         <header class="container-fluid fixed-top shadow">
             <div class="row d-lg-flex pt-2">
-                <div class="d-none d-md-block col-md-6 col-lg-3 text-left">
+                <div class="d-none d-lg-block col-md-6 col-lg-3 text-left">
                     <a href="{% url 'home' %}" class="nav-link">
                         <img src="{{ MEDIA_URL }}logo.png" style="max-height: 40px; color: rgba(255, 255, 255, 0.9);" />
                     </a>
@@ -56,7 +60,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-4 col-md-12 order-md-last">
+                <div class="col-4 col-lg-12 order-lg-last">
                     <nav class="navbar navbar-expand-lg navbar-light w-100">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -64,7 +68,7 @@
                         {% include 'includes/main_nav.html' %}
                     </nav>
                 </div>
-                <div class="col-8 col-md-6 col-lg-4 my-auto py-1 py-lg-0">
+                <div class="col-8 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-md-right my-0">
                         <li class="list-inline-item">
                             <a href="{% url 'home' %}" class="nav-link text-dark">
@@ -195,15 +199,24 @@
             </script>
             <script>
                 $(document).ready(function() {
-                    checkPos();
+                    // Only execute the function on larger screen sizes
+                    var x = window.matchMedia("(min-width: 992px)")
+                    if (x.matches) {
+                        checkPos();
+                        navChange();
+                    }
                 });
 
-                window.onscroll = function() {checkPos()};
+                function navChange() {
+                    window.onscroll = function() {checkPos()};
+                }                
 
                 function checkPos() {
                     window.scrollY > 200 ? $('header').css('opacity', '1') : $('header').css('opacity', '.8');
                 }
                 
+                x.addListener(navChange)
+
             </script>
         {% endblock extra_js %}
     </body>

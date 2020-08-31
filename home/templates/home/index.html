@@ -13,181 +13,240 @@
 {% endblock extra_css %}
 
 {% block content %}
-<div class="jumbotron" id="home">
-    <div id="home_text">
-        <h1 class="display-1 text-uppercase text-center" id="home_text__heading">
-            The<br>Moksha<br>Centre
-        </h1>
-        <hr id="home_text__under">
-        <p class="text-center">A liberating experience</p>
-    </div>
-</div>
-<div id="story_container" class="mt-5">
-    <div id="story"></div>
-    <div class="container pt-5">
-        <div class="row py-5">
-            <div class="col-md-12 col-lg-6" data-aos="fade-right" data-aos-duration="1500">
-                <button class="btn" type="button"><img class="img-fluid" src="{{ MEDIA_URL }}about_us.jpg"
-                        style="border-style: none;"></button>
-            </div>
-            <div class="col" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
-                <h1 class="text-uppercase text-center">A LITTLE BIT ABOUT US</h1>
-                <p class="my-5">At the Moksha Centre we aim to bring healing, balance and harmony into your
-                    life.  We offer some of the highest quality products to ensure that your daily practise is both safe and fulfilling.<br>
-                </p>
-                <p class="mt-5">We share over a decade of experience in the field of yoga, pilates and mindfulness
-                    education and support, and welcome customers from around the world.<br><br>
-                    All our staff are warm, friendly and supportive.<br>
-                </p>
-            </div>
+    <div class="jumbotron" id="home">
+        <div id="home_text">
+            <h1 class="display-1 text-uppercase text-center" id="home_text__heading">
+                The<br>Moksha<br>Centre
+            </h1>
+            <hr id="home_text__under">
+            <p class="text-center">A liberating experience</p>
         </div>
     </div>
-</div>
-<div class="parallax"></div>
-<div id="new_container" class="pb-5">
-    <div id="new_products"></div>
-    <div class="container">
-        <h1 class="text-uppercase text-center py-5">New in store</h1>
-        <div class="row">
-            {% for recent in recent_products %}
-            <div class="col-sm-6 col-lg-4 mt-2">
-                <div class="card shadow" data-aos="zoom-out" data-aos-duration="750"
-                    data-aos-delay="{{forloop.counter|mul:"300"}}">
-                    <a href="{% url 'product_detail' recent.id %}">
-                        <img src="{{ recent.image_url }}" alt="" class="card-img-top w-100 d-block">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title one_line text-uppercase text-center">{{ recent.name }}</h5>
-
-                        <!-- If no product colour enter an empty space to ensure card sizes match -->
-                        <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">
-                            {% if recent.color %}{{ recent.color }}{% else %}&nbsp;{% endif %}</h6>
-                        <div class="row">
-                            <div class="col-6">
-                                <button class="btn btn-outline-dark btn-block disabled">
-                                    <i class="fas fa-euro-sign"> {{ recent.price }}</i>
-                                </button>
-                            </div>
-                            <div class="col-6">
-                                <a href="{% url 'product_detail' recent.id %}" class="btn btn-info btn-block text-light"
-                                    role="button">Info</a>
-                            </div>
-                        </div>
-                    </div>
+    <div id="story_container" class="mt-5">
+        <div id="story"></div>
+        <div class="container pt-5">
+            <div class="row py-5">
+                <div class="col-md-12 col-lg-6" data-aos="fade-right" data-aos-duration="1500">
+                    <button class="btn" type="button"><img class="img-fluid" src="{{ MEDIA_URL }}about_us.jpg"
+                            style="border-style: none;"></button>
+                </div>
+                <div class="col" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+                    <h1 class="text-uppercase text-center">A LITTLE BIT ABOUT US</h1>
+                    <p class="my-5">At the Moksha Centre we aim to bring healing, balance and harmony into your
+                        life.  We offer some of the highest quality products to ensure that your daily practise is both safe and fulfilling.<br>
+                    </p>
+                    <p class="mt-5">We share over a decade of experience in the field of yoga, pilates and mindfulness
+                        education and support, and welcome customers from around the world.<br><br>
+                        All our staff are warm, friendly and supportive.<br>
+                    </p>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
-<div class="forum_subscribe" id="forum_container">
-    <div id="forum"></div>
-    <div class="container" id="forum_signup">
-        <div class="intro">
-            <h2 class="text-center">Share your experiences in our forum</h2>
-            <p class="text-center">Use our forum to find the answers to questions about all things yoga, pilates, mindfulness, or any other related topic.  If you cannot find what you are looking for, maybe you could start a topic of your own.  We would also love you to share your experiences with our community!</p>
-        </div>
-        <div class="text-center">
-            {% if request.user.is_authenticated %}
-            <a href="{% url 'forum:post_list' %}">
-                <button class="btn" type="submit">Forum</button>
-            </a>
-            {% else %}
-            <a href="{% url 'account_signup' %}">
-                <button class="btn" type="submit">Sign up</button>
-            </a>
-            {% endif %}
-        </div>
-    </div>
-</div>
-<div id="offers_container" class="pb-5">
-    <div id="offers"></div>
-    <div class="container">
-        <h1 class="text-uppercase text-center py-5">Special offers</h1>
-        <div class="row">
-            {% for offer in offers %}
-            <div class="col-sm-6 col-lg-4 mt-2">
-                <div class="card shadow" data-aos="zoom-in" data-aos-duration="750"
-                    data-aos-delay="{{forloop.counter|mul:"300"}}">
-                    <a href="{% url 'product_detail' offer.id %}">
-                        <img src="{{ offer.image_url }}" alt="" class="card-img-top w-100 d-block">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title one_line text-uppercase text-center">{{ offer.name }}</h5>
+    <div class="parallax"></div>
+    <div id="new_container" class="pb-5">
+        <div id="new_products"></div>
+        <div class="container">
+            <h1 class="text-uppercase text-center py-5">New in store</h1>
+            <div class="row">
+                {% for recent in recent_products %}
+                    <!-- Centre the card on smaller screens -->
+                    {% if forloop.last %}
+                        <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-0 mt-2">
+                            <div class="card shadow" data-aos="zoom-out" data-aos-duration="750"
+                                data-aos-delay="{{forloop.counter|mul:"300"}}">
+                                <a href="{% url 'product_detail' recent.id %}">
+                                    <img src="{{ recent.image_url }}" alt="" class="card-img-top w-100 d-block">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title one_line text-uppercase text-center">{{ recent.name }}</h5>
 
-                        <!-- If no product colour enter an empty space to ensure card sizes match -->
-                        <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">
-                            {% if offer.color %}{{ offer.color }}{% else %}&nbsp;{% endif %}</h6>
-                        <div class="row">
-                            <div class="col-6">
-                                <button class="btn btn-outline-dark btn-block disabled">
-                                    <i class="fas fa-euro-sign"> {{ offer.price }}</i>
-                                </button>
-                            </div>
-                            <div class="col-6">
-                                <a href="{% url 'product_detail' offer.id %}" class="btn btn-info btn-block text-light" role="button">Info</a>
+                                    <!-- If no product colour enter an empty space to ensure card sizes match -->
+                                    <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">
+                                        {% if recent.color %}{{ recent.color }}{% else %}&nbsp;{% endif %}</h6>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-dark btn-block disabled">
+                                                <i class="fas fa-euro-sign"> {{ recent.price }}</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="{% url 'product_detail' recent.id %}" class="btn btn-info btn-block text-light"
+                                                role="button">Info</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    {% else %}
+                        <div class="col-sm-6 col-lg-4 mt-2">
+                            <div class="card shadow" data-aos="zoom-out" data-aos-duration="750"
+                                data-aos-delay="{{forloop.counter|mul:"300"}}">
+                                <a href="{% url 'product_detail' recent.id %}">
+                                    <img src="{{ recent.image_url }}" alt="" class="card-img-top w-100 d-block">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title one_line text-uppercase text-center">{{ recent.name }}</h5>
+
+                                    <!-- If no product colour enter an empty space to ensure card sizes match -->
+                                    <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">
+                                        {% if recent.color %}{{ recent.color }}{% else %}&nbsp;{% endif %}</h6>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-dark btn-block disabled">
+                                                <i class="fas fa-euro-sign"> {{ recent.price }}</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="{% url 'product_detail' recent.id %}" class="btn btn-info btn-block text-light"
+                                                role="button">Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="forum_subscribe" id="forum_container">
+        <div id="forum"></div>
+        <div class="container" id="forum_signup">
+            <div class="intro">
+                <h2 class="text-center">Share your experiences in our forum</h2>
+                <p class="text-center">Use our forum to find the answers to questions about all things yoga, pilates, mindfulness, or any other related topic.  If you cannot find what you are looking for, maybe you could start a topic of your own.  We would also love you to share your experiences with our community!</p>
+            </div>
+            <div class="text-center">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'forum:post_list' %}">
+                    <button class="btn" type="submit">Forum</button>
+                </a>
+                {% else %}
+                <a href="{% url 'account_signup' %}">
+                    <button class="btn" type="submit">Sign up</button>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div id="offers_container" class="pb-5">
+        <div id="offers"></div>
+        <div class="container">
+            <h1 class="text-uppercase text-center py-5">Special offers</h1>
+            <div class="row">
+                {% for offer in offers %}
+                    <!-- Centre the card on smaller screens -->
+                    {% if forloop.last %}
+                        <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-0 mt-2">
+                            <div class="card shadow" data-aos="zoom-in" data-aos-duration="750"
+                                data-aos-delay="{{forloop.counter|mul:"300"}}">
+                                <a href="{% url 'product_detail' offer.id %}">
+                                    <img src="{{ offer.image_url }}" alt="" class="card-img-top w-100 d-block">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title one_line text-uppercase text-center">{{ offer.name }}</h5>
+
+                                    <!-- If no product colour enter an empty space to ensure card sizes match -->
+                                    <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">
+                                        {% if offer.color %}{{ offer.color }}{% else %}&nbsp;{% endif %}</h6>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-dark btn-block disabled">
+                                                <i class="fas fa-euro-sign"> {{ offer.price }}</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="{% url 'product_detail' offer.id %}" class="btn btn-info btn-block text-light" role="button">Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="col-sm-6 col-lg-4 mt-2">
+                            <div class="card shadow" data-aos="zoom-in" data-aos-duration="750"
+                                data-aos-delay="{{forloop.counter|mul:"300"}}">
+                                <a href="{% url 'product_detail' offer.id %}">
+                                    <img src="{{ offer.image_url }}" alt="" class="card-img-top w-100 d-block">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title one_line text-uppercase text-center">{{ offer.name }}</h5>
+
+                                    <!-- If no product colour enter an empty space to ensure card sizes match -->
+                                    <h6 class="card-subtitle text-muted text-uppercase text-center mb-2">
+                                        {% if offer.color %}{{ offer.color }}{% else %}&nbsp;{% endif %}</h6>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-dark btn-block disabled">
+                                                <i class="fas fa-euro-sign"> {{ offer.price }}</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="{% url 'product_detail' offer.id %}" class="btn btn-info btn-block text-light" role="button">Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div id="contact_container" class="text-center">
+        <div id="contact"></div>
+        <div class="container mt-5 py-5">
+            <h1 class="display-3 text-capitalize mb-5">feel free to contact us!</h1>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <h3 class="text-capitalize-text-center">We'd love to hear from you!</h3>
+                    <a href="#" class="text-light text-decoration-none">info@mokshacentre.ie</a>
+                    <p class="text-uppercase">
+                        <strong>PR & management</strong>
+                    </p>
+                    <a href="#" class="text-light text-decoration-none">admin@moksharcentre.ie</a>
+                    <p class="text-uppercase">
+                        <strong>for business enquiries</strong>
+                    </p>
+                    <p class="text-uppercase mt-5">
+                        <strong>or use the form to send us a quick message</strong>
+                    </p>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <form action="{% url 'home' %}#contact" method="POST">
+                        {% csrf_token %}
+
+                        {{ form.name | as_crispy_field }}
+                        {{ form.email | as_crispy_field }}
+                        {{ form.message | as_crispy_field }}
+
+                        <div class="form-group text-right">
+                            <button class="btn btn-outline-light" type="submit">
+                                Send Message
+                                <i class="far fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
-<div id="contact_container" class="text-center">
-    <div id="contact"></div>
-    <div class="container mt-5 py-5">
-        <h1 class="display-1 text-capitalize mb-5">feel free to contact us!</h1>
-        <div class="row">
-            <div class="col-md-12 col-lg-6">
-                <h3 class="text-capitalize-text-center">We'd love to hear from you!</h3>
-                <a href="#" class="text-light text-decoration-none">info@mokshacentre.ie</a>
-                <p class="text-uppercase">
-                    <strong>PR & management</strong>
-                </p>
-                <a href="#" class="text-light text-decoration-none">admin@moksharcentre.ie</a>
-                <p class="text-uppercase">
-                    <strong>for business enquiries</strong>
-                </p>
-                <p class="text-uppercase mt-5">
-                    <strong>or use the form to send us a quick message</strong>
-                </p>
-            </div>
-            <div class="col-md-12 col-lg-6">
-                <form action="{% url 'home' %}#contact" method="POST">
-                    {% csrf_token %}
-
-                    {{ form.name | as_crispy_field }}
-                    {{ form.email | as_crispy_field }}
-                    {{ form.message | as_crispy_field }}
-
-                    <div class="form-group text-right">
-                        <button class="btn btn-outline-light" type="submit">
-                            Send Message
-                            <i class="far fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock content %}
 
 {% block extra_js %}
-{{ block.super }}
+    {{ block.super }}
 
-<script src="{% static 'js/smooth_scroll.js' %}"></script>
+    <script src="{% static 'js/smooth_scroll.js' %}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
 
-<script>
-    AOS.init({
-        disable: function () {
-            var maxWidth = 1024;
-            return window.innerWidth < maxWidth;
-        }
-    });
-</script>
+    <script>
+        AOS.init({
+            disable: function () {
+                var maxWidth = 1024;
+                return window.innerWidth < maxWidth;
+            }
+        });
+    </script>
 {% endblock extra_js %}

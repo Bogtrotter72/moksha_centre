@@ -13,7 +13,7 @@
 
 @media only screen and (min-width: 576px) {
     body {
-        font-size: 1rem;
+        font-size: .8rem;
     }
     
     .forum_subscribe .intro {
@@ -52,7 +52,7 @@
     }
     
     #product_detail_container, #products_container {
-        margin: 10% auto 5%;
+        margin: 14% auto 5%;
     }
     
 }
@@ -73,12 +73,30 @@
 
 
 @media only screen and (min-width: 992px) {
+    #forum, #new_products, #offers {
+        top: -80px;
+    }
+    
+    #product_detail_container, #products_container {
+        margin: 17% auto 5%;
+    }
     
 }
 
+@media only screen and (orientation: landscape) and (min-width: 992px){
+    #product_detail_container, #products_container {
+        margin: 16% auto 5%;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
-    .display-1 {
-        font-size: 6rem;
+    #forum_post_container, #post_share_container {
+        margin-top: 10%;
+    
+    }
+    
+    #login_container, #logout_container, #password_container, #signup_container {
+        margin: 15% auto 5%;
     }
     
     #home {
@@ -88,15 +106,29 @@
     #home_text {
         top: 60%;
     }
+    
+    .display-1 {
+        font-size: 6rem;
+    }
 }
 
-@media only screen and (min-width: 1366px) {    
+@media only screen and (min-width: 1200px) and (orientation: landscape){
+    #product_detail_container, #products_container {
+        margin: 14% auto 5%;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    body {
+        font-size: 1rem;
+    }
+
     #home_text {
         top: 50%;
     }
     
     #products_container {
-        margin: 10% auto 5%;
+        margin: 12% auto 5%;
     }
     
     #product_detail_container {

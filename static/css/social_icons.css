@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .social_icons {
     background-color: transparent;
     color: #313437;
@@ -17,4 +24,3 @@
     text-align: center;
     width: 60px;
 }
-

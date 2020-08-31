@@ -1,3 +1,19 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* ELEMENTS */
+p.date { 
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic; 
+}
+
+
 /* IDs */
 #content { 
     float:left;
@@ -6,7 +22,7 @@
 }
 
 #forum_post_container, #post_share_container {
-    margin-top: 10%;
+    margin-top: 20%;
     min-height: 100vh;
     position: relative;
 }
@@ -18,11 +34,4 @@
 #sidebar { 
     padding:10px;
     height:90vh;
-}
-
-p.date { 
-    color:#ccc;
-    font-family: georgia, serif;
-    font-size: 12px;
-    font-style: italic; 
 }

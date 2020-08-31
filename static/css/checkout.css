@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* IDs */
 #checkout_container, #order-success_container {
     background-color: rgba(233, 236, 239, 0);
@@ -18,11 +25,21 @@
     z-index: 10000;
 }
 
+
+
+/* CLASSES */
+
 .loading_spinner {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0;
 }
 
@@ -30,22 +47,29 @@
     background-color: white;
     border: 1px solid #ced4da;
     border-radius: 4px;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 3px 0 #e6ebf1;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
+    -webkit-transition: -webkit-box-shadow 150ms ease;
+    transition: -webkit-box-shadow 150ms ease;
+    -o-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease, -webkit-box-shadow 150ms ease;
     -webkit-transition: box-shadow 150ms ease;
-  }
+}
   
-  .StripeElement--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-  }
+.StripeElement--focus {
+    -webkit-box-shadow: 0 1px 3px 0 #cfd7df;
+            box-shadow: 0 1px 3px 0 #cfd7df;
+}
   
-  .StripeElement--invalid {
+.StripeElement--invalid {
     border-color: #fa755a;
-  }
+}
   
-  .StripeElement--webkit-autofill {
+.StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
-  }
+} 
