@@ -1,11 +1,11 @@
 /* ELEMENT STYLING */
 
 body {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 header {
-    background-color: white;
+    background-color: #fea900;
 }
 
 h1 {
@@ -41,7 +41,7 @@ table#bag_details {
 
 #bag_container, #login_container, #logout_container, #password_container, #signup_container {
     background-color: rgba(233, 236, 239, 0);
-    margin: 10% auto 5%;
+    margin: 20% auto 5%;
     min-height: 100vh;
     position: relative;
     z-index: 100;
@@ -94,7 +94,7 @@ table#bag_details {
 
 #product_detail_container, #products_container {
     position: relative;
-    margin: 40% auto 5%;
+    margin: 30% auto 5%;
 }
 
 #story_container {
@@ -133,6 +133,10 @@ table#bag_details {
     font-size: inherit;
 }
 
+.btn-group-sm>.btn, .btn-sm {
+    padding: .25rem 0.3rem;
+}
+
 .btn_search {
     color: #343a40;
     border-color: #343a40;
@@ -161,6 +165,10 @@ table#bag_details {
 
 .home_contact_form::placeholder {
     color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
 }
 
 .nav-link {

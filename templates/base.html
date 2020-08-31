@@ -13,6 +13,12 @@
                 integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
                 crossorigin="anonymous">
             
+            <!-- Favicon -->
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ MEDIA_URL }}apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ MEDIA_URL }}favicon-16x16.png">
+            <link rel="manifest" href="{{ MEDIA_URL }}site.webmanifest">
+
             <!-- Font Awesome -->
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
             integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -195,7 +201,7 @@
                 window.onscroll = function() {checkPos()};
 
                 function checkPos() {
-                    window.scrollY > 200 ? $('header').css('opacity', '.9') : $('header').css('opacity', '.7');
+                    window.scrollY > 200 ? $('header').css('opacity', '1') : $('header').css('opacity', '.8');
                 }
                 
             </script>
